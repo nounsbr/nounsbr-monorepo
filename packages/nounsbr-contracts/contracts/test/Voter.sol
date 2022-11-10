@@ -2,19 +2,19 @@
 
 pragma solidity ^0.8.6;
 
-import { NounsDAOLogicV2 } from '../governance/NounsDAOLogicV2.sol';
+import { NounsBRDAOLogicV2 } from '../governance/NounsBRDAOLogicV2.sol';
 
 /**
  * @dev this contract is used to simulate voting via a multisig
  */
 contract Voter {
-    NounsDAOLogicV2 public dao;
+    NounsBRDAOLogicV2 public dao;
     uint256 public proposalId;
     uint8 public support;
     bool useReason;
 
     constructor(
-        NounsDAOLogicV2 dao_,
+        NounsBRDAOLogicV2 dao_,
         uint256 proposalId_,
         uint8 support_,
         bool useReason_
