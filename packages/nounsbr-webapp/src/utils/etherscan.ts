@@ -6,7 +6,7 @@ const getBaseURL = (network: ChainId) => {
     case ChainId.Rinkeby:
       return 'https://rinkeby.etherscan.io/';
     case ChainId.Goerli:
-        return 'https://goerli.etherscan.io/';      
+      return 'https://goerli.etherscan.io/';
     default:
       return 'https://etherscan.io/';
   }

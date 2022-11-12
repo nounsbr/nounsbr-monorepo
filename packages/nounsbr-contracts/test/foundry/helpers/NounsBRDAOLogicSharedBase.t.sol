@@ -30,7 +30,13 @@ abstract contract NounsBRDAOLogicSharedBaseTest is Test, DeployUtils {
 
     function setUp() public virtual {
         NounsBRDescriptorV2 descriptor = _deployAndPopulateV2();
-        nounsbrToken = new NounsBRToken(noundersbrDAO, minter, descriptor, new NounsBRSeeder(), IProxyRegistry(address(0)));
+        nounsbrToken = new NounsBRToken(
+            noundersbrDAO,
+            minter,
+            descriptor,
+            new NounsBRSeeder(),
+            IProxyRegistry(address(0))
+        );
 
         daoProxy = deployDAOProxy();
 

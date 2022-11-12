@@ -19,7 +19,13 @@ contract NounsBRTokenTest is Test, DeployUtils {
         NounsBRDescriptorV2 descriptor = _deployAndPopulateV2();
         _populateDescriptorV2(descriptor);
 
-        nounsbrToken = new NounsBRToken(noundersbrDAO, minter, descriptor, new NounsBRSeeder(), IProxyRegistry(address(0)));
+        nounsbrToken = new NounsBRToken(
+            noundersbrDAO,
+            minter,
+            descriptor,
+            new NounsBRSeeder(),
+            IProxyRegistry(address(0))
+        );
     }
 
     function testSymbol() public {

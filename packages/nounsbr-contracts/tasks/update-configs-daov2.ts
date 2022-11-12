@@ -41,7 +41,10 @@ task('update-configs-daov2', 'Write the deployed addresses to the SDK and subgra
 
       // Generate subgraph config
       const configName = `${network}-fork`;
-      const subgraphConfigPath = join(__dirname, `../../nounsbr-subgraph/config/${configName}.json`);
+      const subgraphConfigPath = join(
+        __dirname,
+        `../../nounsbr-subgraph/config/${configName}.json`,
+      );
       const subgraphConfig = {
         network,
         nounsbrToken: {

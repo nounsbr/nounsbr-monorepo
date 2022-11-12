@@ -152,7 +152,11 @@ const ChainSubscriber: React.FC = () => {
     const processAuctionExtended = (nounbrId: BigNumberish, endTime: BigNumberish) => {
       dispatch(setAuctionExtended({ nounbrId, endTime }));
     };
-    const processAuctionSettled = (nounbrId: BigNumberish, winner: string, amount: BigNumberish) => {
+    const processAuctionSettled = (
+      nounbrId: BigNumberish,
+      winner: string,
+      amount: BigNumberish,
+    ) => {
       dispatch(setAuctionSettled({ nounbrId, amount, winner }));
     };
 
@@ -162,7 +166,10 @@ const ChainSubscriber: React.FC = () => {
     dispatch(setLastAuctionNounBRId(currentAuction.nounbrId.toNumber()));
 
     // Fetch the previous 24hours of  bids
-    const previousBids = await nounsbrAuctionHouseContract.queryFilter(bidFilter, 0 - BLOCKS_PER_DAY);
+    const previousBids = await nounsbrAuctionHouseContract.queryFilter(
+      bidFilter,
+      0 - BLOCKS_PER_DAY,
+    );
     for (let event of previousBids) {
       if (event.args === undefined) return;
       processBidFilter(...(event.args as [BigNumber, string, BigNumber, boolean]), event);

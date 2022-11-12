@@ -11,5 +11,7 @@ interface Vote {
  * @returns - flat list of nounbrIds that voted supportDetailed for the given prop
  */
 export const getNounBRVotes = (votes: Vote[], supportDetailed: number) => {
-  return votes.filter(v => v.supportDetailed === supportDetailed).flatMap(v => v.nounsbrRepresented);
+  return votes
+    .filter(v => v.supportDetailed === supportDetailed)
+    .flatMap(v => v.nounsbrRepresented);
 };

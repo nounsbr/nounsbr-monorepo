@@ -103,7 +103,10 @@ async function deploy() {
   ]);
 
   // 2b. CAST proxy as AuctionHouse
-  nounsbrAuctionHouse = NounsBRAuctionHouseFactory.connect(nounsbrAuctionHouseProxy.address, deployer);
+  nounsbrAuctionHouse = NounsBRAuctionHouseFactory.connect(
+    nounsbrAuctionHouseProxy.address,
+    deployer,
+  );
 
   // 3. SET MINTER
   await nounsbrToken.setMinter(nounsbrAuctionHouse.address);

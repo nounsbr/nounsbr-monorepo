@@ -47,7 +47,10 @@ task('update-configs', 'Write the deployed addresses to the SDK and subgraph con
 
       // Generate subgraph config
       const configName = `${network}-fork`;
-      const subgraphConfigPath = join(__dirname, `../../nounsbr-subgraph/config/${configName}.json`);
+      const subgraphConfigPath = join(
+        __dirname,
+        `../../nounsbr-subgraph/config/${configName}.json`,
+      );
       const subgraphConfig = {
         network,
         nounsbrToken: {

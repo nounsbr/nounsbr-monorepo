@@ -46,7 +46,8 @@ const AuctionPage: React.FC<AuctionPageProps> = props => {
   return (
     <>
       <Auction auction={onDisplayAuction} />
-      {onDisplayAuctionNounBRId !== undefined && onDisplayAuctionNounBRId !== lastAuctionNounBRId ? (
+      {onDisplayAuctionNounBRId !== undefined &&
+      onDisplayAuctionNounBRId !== lastAuctionNounBRId ? (
         <ProfileActivityFeed nounbrId={onDisplayAuctionNounBRId} />
       ) : (
         <Banner />

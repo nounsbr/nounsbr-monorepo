@@ -33,22 +33,24 @@ const DelegateGruopedNounBRImageVoteTable: React.FC<
     const rowLength = 4;
 
     const paddedNounBRIds = shuffledDelegatedGroupedNounsBR
-      .map((data: { delegate: string; supportDetailed: 0 | 1 | 2; nounsbrRepresented: string[] }) => {
-        return (
-          <HoverCard
-            hoverCardContent={(tip: string) => (
-              <DelegateHoverCard delegateId={tip} proposalCreationBlock={proposalCreationBlock} />
-            )}
-            // We add this prefix to prevent collisions with the NounBR info cards
-            tip={`delegate-${data.delegate}`}
-            id="delegateVoteHoverCard"
-          >
-            <TightStackedCircleNounsBR
-              nounbrIds={data.nounsbrRepresented.map((nounbrId: string) => parseInt(nounbrId))}
-            />
-          </HoverCard>
-        );
-      })
+      .map(
+        (data: { delegate: string; supportDetailed: 0 | 1 | 2; nounsbrRepresented: string[] }) => {
+          return (
+            <HoverCard
+              hoverCardContent={(tip: string) => (
+                <DelegateHoverCard delegateId={tip} proposalCreationBlock={proposalCreationBlock} />
+              )}
+              // We add this prefix to prevent collisions with the NounBR info cards
+              tip={`delegate-${data.delegate}`}
+              id="delegateVoteHoverCard"
+            >
+              <TightStackedCircleNounsBR
+                nounbrIds={data.nounsbrRepresented.map((nounbrId: string) => parseInt(nounbrId))}
+              />
+            </HoverCard>
+          );
+        },
+      )
       .slice(page * NOUNSBR_PER_VOTE_CARD_DESKTOP, (page + 1) * NOUNSBR_PER_VOTE_CARD_DESKTOP)
       .concat(Array(NOUNSBR_PER_VOTE_CARD_DESKTOP).fill(<GrayCircle isDelegateView={true} />));
 

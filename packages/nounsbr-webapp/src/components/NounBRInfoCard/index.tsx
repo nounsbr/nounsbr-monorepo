@@ -39,7 +39,9 @@ const NounBRInfoCard: React.FC<NounBRInfoCardProps> = props => {
       <Col lg={12} className={classes.nounbrInfoRow}>
         <NounBRInfoRowButton
           iconImgSource={_BidsIcon}
-          btnText={lastAuctionNounBRId === nounbrId ? <Trans>Bids</Trans> : <Trans>Bid history</Trans>}
+          btnText={
+            lastAuctionNounBRId === nounbrId ? <Trans>Bids</Trans> : <Trans>Bid history</Trans>
+          }
           onClickHandler={bidHistoryOnClickHandler}
         />
         <NounBRInfoRowButton

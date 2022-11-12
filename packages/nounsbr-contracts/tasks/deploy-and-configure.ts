@@ -1,15 +1,16 @@
 import { task, types } from 'hardhat/config';
 import { printContractsTable } from './utils';
 
-task(
-  'deploy-and-configure',
-  'Deploy and configure all contracts with short gov times for testing',
-)
+task('deploy-and-configure', 'Deploy and configure all contracts with short gov times for testing')
   .addFlag('startAuction', 'Start the first auction upon deployment completion')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
   .addFlag('updateConfigs', 'Write the deployed addresses to the SDK and subgraph configs')
   .addOptionalParam('weth', 'The WETH contract address')
-  .addOptionalParam('noundersbrdao', 'The noundersbr DAO contract address', '0x3c68309658218f9eE50E659390b3C23A4F5c1400')
+  .addOptionalParam(
+    'noundersbrdao',
+    'The noundersbr DAO contract address',
+    '0x3c68309658218f9eE50E659390b3C23A4F5c1400',
+  )
   .addOptionalParam(
     'auctionTimeBuffer',
     'The auction time buffer (seconds)',

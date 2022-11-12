@@ -48,7 +48,9 @@ export function formatAuctionStartedTweetText(auctionId: number) {
  */
 export async function formatBidMessageText(id: number, bid: Bid) {
   const bidder = await resolveEnsOrFormatAddress(bid.bidder.id);
-  return `NounBR ${id} has received a bid of Ξ${ethers.utils.formatEther(bid.amount)} from ${bidder}`;
+  return `NounBR ${id} has received a bid of Ξ${ethers.utils.formatEther(
+    bid.amount,
+  )} from ${bidder}`;
 }
 
 /**

@@ -15,7 +15,6 @@ interface WinnerProps {
   isNoundersBR?: boolean;
 }
 
-
 const Winner: React.FC<WinnerProps> = props => {
   const { winner, isNoundersBR } = props;
   const activeAccount = useAppSelector(state => state.account.activeAccount);

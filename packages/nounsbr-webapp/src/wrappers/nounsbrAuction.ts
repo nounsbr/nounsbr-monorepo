@@ -60,13 +60,17 @@ export const useAuctionMinBidIncPercentage = () => {
 export const useNounBRCanVoteTimestamp = (nounbrId: number) => {
   const nextNounBRId = nounbrId + 1;
 
-  const nextNounBRIdForQuery = isNounderBRNounBR(EthersBN.from(nextNounBRId)) ? nextNounBRId + 1 : nextNounBRId;
+  const nextNounBRIdForQuery = isNounderBRNounBR(EthersBN.from(nextNounBRId))
+    ? nextNounBRId + 1
+    : nextNounBRId;
 
   const pastAuctions = useAppSelector(state => state.pastAuctions.pastAuctions);
 
   const maybeNounBRCanVoteTimestamp = pastAuctions.find((auction: AuctionState, i: number) => {
     const maybeNounBRId = auction.activeAuction?.nounbrId;
-    return maybeNounBRId ? EthersBN.from(maybeNounBRId).eq(EthersBN.from(nextNounBRIdForQuery)) : false;
+    return maybeNounBRId
+      ? EthersBN.from(maybeNounBRId).eq(EthersBN.from(nextNounBRIdForQuery))
+      : false;
   })?.activeAuction?.startTime;
 
   if (!maybeNounBRCanVoteTimestamp) {

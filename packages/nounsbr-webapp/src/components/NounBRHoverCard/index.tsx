@@ -40,7 +40,9 @@ const NounBRHoverCard: React.FC<NounBRHoverCardProps> = props => {
     );
   }
   const numericNounBRId = parseInt(nounbrId);
-  const nounbrIdForQuery = isNounderBRNounBR(BigNumber.from(nounbrId)) ? numericNounBRId + 1 : numericNounBRId;
+  const nounbrIdForQuery = isNounderBRNounBR(BigNumber.from(nounbrId))
+    ? numericNounBRId + 1
+    : numericNounBRId;
   const startTime = getNounBRBirthday(nounbrIdForQuery, pastAuctions);
 
   if (error || !startTime) {

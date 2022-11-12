@@ -4,7 +4,6 @@
   font-family: 'Londrina Solid';
 }
 
-
 /* .nounbrersPage h2 {
   margin-bottom: 2rem;
 } */
@@ -121,7 +120,6 @@ p {
   padding-top: 0.8rem;
 }
 
-
 .generateBtn {
   max-width: 15rem;
   height: 3rem;
@@ -167,9 +165,8 @@ p {
 @media (max-width: 992px) {
   .verifyButtonWrapper {
     text-align: center;
-    width :fit-content;
+    width: fit-content;
   }
-
 }
 
 .treasuryInfoText {

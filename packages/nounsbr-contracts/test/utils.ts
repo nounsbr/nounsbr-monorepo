@@ -139,12 +139,16 @@ export const populateDescriptor = async (nounsbrDescriptor: NounsBRDescriptor): 
     chunkArray(accessories, 10).map(chunk =>
       nounsbrDescriptor.addManyAccessories(chunk.map(({ data }) => data)),
     ),
-    chunkArray(heads, 10).map(chunk => nounsbrDescriptor.addManyHeads(chunk.map(({ data }) => data))),
+    chunkArray(heads, 10).map(chunk =>
+      nounsbrDescriptor.addManyHeads(chunk.map(({ data }) => data)),
+    ),
     nounsbrDescriptor.addManyGlasses(glasses.map(({ data }) => data)),
   ]);
 };
 
-export const populateDescriptorV2 = async (nounsbrDescriptor: NounsBRDescriptorV2): Promise<void> => {
+export const populateDescriptorV2 = async (
+  nounsbrDescriptor: NounsBRDescriptorV2,
+): Promise<void> => {
   const { bgcolors, palette, images } = ImageDataV2;
   const { bodies, accessories, heads, glasses } = images;
 
@@ -172,7 +176,11 @@ export const populateDescriptorV2 = async (nounsbrDescriptor: NounsBRDescriptorV
   await nounsbrDescriptor.addManyBackgrounds(bgcolors);
   await nounsbrDescriptor.setPalette(0, `0x000000${palette.join('')}`);
   await nounsbrDescriptor.addBodies(bodiesCompressed, bodiesLength, bodiesCount);
-  await nounsbrDescriptor.addAccessories(accessoriesCompressed, accessoriesLength, accessoriesCount);
+  await nounsbrDescriptor.addAccessories(
+    accessoriesCompressed,
+    accessoriesLength,
+    accessoriesCount,
+  );
   await nounsbrDescriptor.addHeads(headsCompressed, headsLength, headsCount);
   await nounsbrDescriptor.addGlasses(glassesCompressed, glassesLength, glassesCount);
 };
@@ -229,7 +237,9 @@ export const deployGovAndToken = async (
   // Cast Delegator as Delegate
   const gov = NounsBRDaoLogicV1Factory.connect(govDelegatorAddress, deployer);
 
-  await populateDescriptorV2(NounsBRDescriptorV2Factory.connect(await token.descriptor(), deployer));
+  await populateDescriptorV2(
+    NounsBRDescriptorV2Factory.connect(await token.descriptor(), deployer),
+  );
 
   return { token, gov, timelock };
 };
@@ -273,7 +283,9 @@ export const deployGovV2AndToken = async (
   // Cast Delegator as Delegate
   const gov = NounsBRDaoLogicV2Factory.connect(govDelegatorAddress, deployer);
 
-  await populateDescriptorV2(NounsBRDescriptorV2Factory.connect(await token.descriptor(), deployer));
+  await populateDescriptorV2(
+    NounsBRDescriptorV2Factory.connect(await token.descriptor(), deployer),
+  );
 
   return { token, gov, timelock };
 };
@@ -300,7 +312,10 @@ export const MintNounsBR = (
 /**
  * Mints or burns tokens to target a total supply. Due to NoundersBR' rewards tokens may be burned and tokenIds will not be sequential
  */
-export const setTotalSupply = async (token: NounsBRToken, newTotalSupply: number): Promise<void> => {
+export const setTotalSupply = async (
+  token: NounsBRToken,
+  newTotalSupply: number,
+): Promise<void> => {
   const totalSupply = (await token.totalSupply()).toNumber();
 
   if (totalSupply < newTotalSupply) {

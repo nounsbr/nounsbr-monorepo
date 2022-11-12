@@ -32,7 +32,12 @@ import { INounsBRAuctionHouse } from './interfaces/INounsBRAuctionHouse.sol';
 import { INounsBRToken } from './interfaces/INounsBRToken.sol';
 import { IWETH } from './interfaces/IWETH.sol';
 
-contract NounsBRAuctionHouse is INounsBRAuctionHouse, PausableUpgradeable, ReentrancyGuardUpgradeable, OwnableUpgradeable {
+contract NounsBRAuctionHouse is
+    INounsBRAuctionHouse,
+    PausableUpgradeable,
+    ReentrancyGuardUpgradeable,
+    OwnableUpgradeable
+{
     // The NounsBR ERC721 token contract
     INounsBRToken public nounsbr;
 

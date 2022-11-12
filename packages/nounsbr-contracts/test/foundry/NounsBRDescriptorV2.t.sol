@@ -142,7 +142,9 @@ contract NounsBRDescriptorV2Test is Test {
         vm.mockCall(
             address(art),
             abi.encodeWithSelector(NounsBRArt.getBodiesTrait.selector),
-            abi.encode(INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) }))
+            abi.encode(
+                INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) })
+            )
         );
         assertEq(descriptor.bodyCount(), 42);
         vm.clearMockedCalls();
@@ -152,7 +154,9 @@ contract NounsBRDescriptorV2Test is Test {
         vm.mockCall(
             address(art),
             abi.encodeWithSelector(NounsBRArt.getAccessoriesTrait.selector),
-            abi.encode(INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) }))
+            abi.encode(
+                INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) })
+            )
         );
         assertEq(descriptor.accessoryCount(), 42);
         vm.clearMockedCalls();
@@ -162,7 +166,9 @@ contract NounsBRDescriptorV2Test is Test {
         vm.mockCall(
             address(art),
             abi.encodeWithSelector(NounsBRArt.getHeadsTrait.selector),
-            abi.encode(INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) }))
+            abi.encode(
+                INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) })
+            )
         );
         assertEq(descriptor.headCount(), 42);
         vm.clearMockedCalls();
@@ -172,7 +178,9 @@ contract NounsBRDescriptorV2Test is Test {
         vm.mockCall(
             address(art),
             abi.encodeWithSelector(NounsBRArt.getGlassesTrait.selector),
-            abi.encode(INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) }))
+            abi.encode(
+                INounsBRArt.Trait({ storedImagesCount: 42, storagePages: new INounsBRArt.NounBRArtStoragePage[](0) })
+            )
         );
         assertEq(descriptor.glassesCount(), 42);
         vm.clearMockedCalls();
@@ -449,14 +457,22 @@ contract NounsBRDescriptorV2Test is Test {
     }
 
     function testPalettesUsesArt() public {
-        vm.mockCall(address(art), abi.encodeWithSelector(INounsBRArt.palettes.selector, 17), abi.encode('return value'));
+        vm.mockCall(
+            address(art),
+            abi.encodeWithSelector(INounsBRArt.palettes.selector, 17),
+            abi.encode('return value')
+        );
         assertEq(descriptor.palettes(17), 'return value');
         vm.clearMockedCalls();
     }
 
     function testGetPartsForSeedWorks() public {
         vm.mockCall(address(art), abi.encodeWithSelector(INounsBRArt.bodies.selector), abi.encode('the body'));
-        vm.mockCall(address(art), abi.encodeWithSelector(INounsBRArt.accessories.selector), abi.encode('the accessory'));
+        vm.mockCall(
+            address(art),
+            abi.encodeWithSelector(INounsBRArt.accessories.selector),
+            abi.encode('the accessory')
+        );
         vm.mockCall(address(art), abi.encodeWithSelector(INounsBRArt.heads.selector), abi.encode('the head'));
         vm.mockCall(address(art), abi.encodeWithSelector(INounsBRArt.glasses.selector), abi.encode('the glasses'));
         vm.mockCall(address(art), abi.encodeWithSelector(INounsBRArt.palettes.selector), abi.encode('the palette'));

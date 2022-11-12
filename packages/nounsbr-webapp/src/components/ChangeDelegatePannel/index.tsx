@@ -8,7 +8,11 @@ import currentDelegatePannelClasses from '../CurrentDelegatePannel/CurrentDelega
 import DelegationCandidateInfo from '../DelegationCandidateInfo';
 import NavBarButton, { NavBarButtonStyle } from '../NavBarButton';
 import classes from './ChangeDelegatePannel.module.css';
-import { useDelegateVotes, useNounBRTokenBalance, useUserDelegatee } from '../../wrappers/nounbrToken';
+import {
+  useDelegateVotes,
+  useNounBRTokenBalance,
+  useUserDelegatee,
+} from '../../wrappers/nounbrToken';
 import { usePickByState } from '../../utils/pickByState';
 import { buildEtherscanTxLink } from '../../utils/etherscan';
 import { useActiveLocale } from '../../hooks/useActivateLocale';

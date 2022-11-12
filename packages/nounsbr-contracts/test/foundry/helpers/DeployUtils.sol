@@ -52,7 +52,13 @@ abstract contract DeployUtils is Test, DescriptorHelpers {
 
         NounsBRDAOExecutor timelock = new NounsBRDAOExecutor(address(1), TIMELOCK_DELAY);
         NounsBRDescriptor descriptor = new NounsBRDescriptor();
-        NounsBRToken nounsbrToken = new NounsBRToken(noundersbrDAO, minter, descriptor, new NounsBRSeeder(), proxyRegistry);
+        NounsBRToken nounsbrToken = new NounsBRToken(
+            noundersbrDAO,
+            minter,
+            descriptor,
+            new NounsBRSeeder(),
+            proxyRegistry
+        );
         NounsBRDAOProxy proxy = new NounsBRDAOProxy(
             address(timelock),
             address(nounsbrToken),

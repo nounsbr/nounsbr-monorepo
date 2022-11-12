@@ -8,7 +8,7 @@ const networkName = () => {
     case 4:
       return 'the Rinkeby network';
     case 5:
-      return 'the Goerli network';      
+      return 'the Goerli network';
     default:
       return `Network ${CHAIN_ID}`;
   }
@@ -21,7 +21,7 @@ const metamaskNetworkName = () => {
     case 4:
       return 'Rinkeby Test Network';
     case 5:
-        return 'Goerli Test Network';      
+      return 'Goerli Test Network';
     default:
       return `Network ${CHAIN_ID}`;
   }
@@ -36,7 +36,8 @@ const NetworkAlert = () => {
         </Modal.Header>
         <Modal.Body>
           <p>
-            NounsBR DAO auctions require you to switch over {networkName()} to be able to participate.
+            NounsBR DAO auctions require you to switch over {networkName()} to be able to
+            participate.
           </p>
           <p>
             <b>To get started, please switch your network by following the instructions below:</b>

@@ -293,7 +293,6 @@ const Bid: React.FC<{
                 </Button>
               </Col>
             )}
-              
           </>
         )}
       </InputGroup>

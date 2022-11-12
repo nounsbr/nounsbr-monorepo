@@ -44,7 +44,9 @@ const ByLineHoverCard: React.FC<ByLineHoverCardProps> = props => {
     <div className={classes.wrapper}>
       <div className={classes.stackedNounBRWrapper}>
         <HorizontalStackedNounsBR
-          nounbrIds={data.delegates[0].nounsbrRepresented.map((nounbr: { id: string }) => nounbr.id)}
+          nounbrIds={data.delegates[0].nounsbrRepresented.map(
+            (nounbr: { id: string }) => nounbr.id,
+          )}
         />
       </div>
 

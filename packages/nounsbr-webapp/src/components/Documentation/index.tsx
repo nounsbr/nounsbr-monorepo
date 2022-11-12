@@ -65,7 +65,9 @@ const Documentation = () => {
                   <Trans>One NounBR is trustlessly auctioned every 15 minutes, forever.</Trans>
                 </li>
                 <li>
-                  <Trans>100% of NounBR auction proceeds are trustlessly sent to the treasury.</Trans>
+                  <Trans>
+                    100% of NounBR auction proceeds are trustlessly sent to the treasury.
+                  </Trans>
                 </li>
                 <li>
                   <Trans>Settlement of one auction kicks off the next.</Trans>
@@ -92,7 +94,8 @@ const Documentation = () => {
                 </li>
                 <li>
                   <Trans>
-                    NoundersBR receive rewards in the form of NounsBR (10% of supply for first 5 years).
+                    NoundersBR receive rewards in the form of NounsBR (10% of supply for first 5
+                    years).
                   </Trans>
                 </li>
               </ul>
@@ -134,12 +137,12 @@ const Documentation = () => {
             </Accordion.Header>
             <Accordion.Body>
               <Trans>
-                NounsBR DAO utilizes a fork of {compoundGovLink} and is the main governing body of the
-                NounsBR ecosystem. The NounsBR DAO treasury receives 100% of ETH proceeds from daily
-                NounBR auctions. Each NounBR is an irrevocable member of NounsBR DAO and entitled to one
-                vote in all governance matters. NounBR votes are non-transferable (if you sell your
-                NounBR the vote goes with it) but delegatable, which means you can assign your vote to
-                someone else as long as you own your NounBR.
+                NounsBR DAO utilizes a fork of {compoundGovLink} and is the main governing body of
+                the NounsBR ecosystem. The NounsBR DAO treasury receives 100% of ETH proceeds from
+                daily NounBR auctions. Each NounBR is an irrevocable member of NounsBR DAO and
+                entitled to one vote in all governance matters. NounBR votes are non-transferable
+                (if you sell your NounBR the vote goes with it) but delegatable, which means you can
+                assign your vote to someone else as long as you own your NounBR.
               </Trans>
             </Accordion.Body>
           </Accordion.Item>
@@ -169,24 +172,39 @@ const Documentation = () => {
               </p>
               <p>
                 <Trans>
-                  Consequently, the NounsBR Foundation anticipates being the steward of the veto power
-                  until NounsBR DAO is ready to implement an alternative, and therefore wishes to
-                  clarify the conditions under which it would exercise this power.
+                  Consequently, the NounsBR Foundation anticipates being the steward of the veto
+                  power until NounsBR DAO is ready to implement an alternative, and therefore wishes
+                  to clarify the conditions under which it would exercise this power.
                 </Trans>
               </p>
               <p>
                 <Trans>
-                  The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:
+                  The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that
+                  should not be exercised in the normal course of business. The NounsBR DAO will
+                  veto proposals that introduce non-trivial legal or existential risks to the
+                  NounsBR DAO , including (but not necessarily limited to) proposals that:
                 </Trans>
               </p>
               <ul>
-                <li><Trans>unequally withdraw the treasury for personal gain</Trans></li>
-                <li><Trans>bribe voters to facilitate withdraws of the treasury for personal gain</Trans></li>
                 <li>
-                <Trans>attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring
-                  a voting majority</Trans>
+                  <Trans>unequally withdraw the treasury for personal gain</Trans>
                 </li>
-                <li><Trans>make upgrades to critical smart contracts without undergoing an audit</Trans></li>
+                <li>
+                  <Trans>
+                    bribe voters to facilitate withdraws of the treasury for personal gain
+                  </Trans>
+                </li>
+                <li>
+                  <Trans>
+                    attempt to alter NounBR auction cadence for the purpose of maintaining or
+                    acquiring a voting majority
+                  </Trans>
+                </li>
+                <li>
+                  <Trans>
+                    make upgrades to critical smart contracts without undergoing an audit
+                  </Trans>
+                </li>
               </ul>
               <p>
                 <Trans>
@@ -265,9 +283,9 @@ const Documentation = () => {
                 <Trans>
                   The NounBR Seeder contract is used to determine NounBR traits during the minting
                   process. The seeder contract can be replaced to allow for future trait generation
-                  algorithm upgrades. Additionally, it can be locked by the NounsBR DAO to prevent any
-                  future updates. Currently, NounBR traits are determined using pseudo-random number
-                  generation:
+                  algorithm upgrades. Additionally, it can be locked by the NounsBR DAO to prevent
+                  any future updates. Currently, NounBR traits are determined using pseudo-random
+                  number generation:
                 </Trans>
               </p>
               <code>keccak256(abi.encodePacked(blockhash(block.number - 1), nounbrId))</code>
@@ -275,8 +293,8 @@ const Documentation = () => {
               <br />
               <p>
                 <Trans>
-                  Trait generation is not truly random. Traits can be predicted when minting a NounBR
-                  on the pending block.
+                  Trait generation is not truly random. Traits can be predicted when minting a
+                  NounBR on the pending block.
                 </Trans>
               </p>
             </Accordion.Body>
@@ -288,7 +306,8 @@ const Documentation = () => {
             <Accordion.Body>
               <p>
                 <Trans>
-                  'NoundersBR' are the group of 3 brazilian artists and entrepreneurs that initiated NounsBR. Here are the NoundersBR:
+                  'NoundersBR' are the group of 3 brazilian artists and entrepreneurs that initiated
+                  NounsBR. Here are the NoundersBR:
                 </Trans>
               </p>
               <ul>
@@ -303,21 +322,27 @@ const Documentation = () => {
                   <Link text="@komesciart" url="https://twitter.com/komesciart" leavesPage={true} />
                 </li>
                 <li>
-                  <Link text="@QuijoteHorizon" url="https://twitter.com/QuijoteHorizon" leavesPage={true} />
+                  <Link
+                    text="@QuijoteHorizon"
+                    url="https://twitter.com/QuijoteHorizon"
+                    leavesPage={true}
+                  />
                 </li>
               </ul>
               <p>
                 <Trans>
-                  Because 100% of NounBR auction proceeds are sent to NounsBR DAO, NoundersBR have chosen
-                  to compensate themselves with NounsBR. Every 10th NounBR for the first 5 years of the
-                  project (NounBR ids #0, #10, #20, #30 and so on) will be automatically sent to the
-                  NounderBR's multisig to be vested and shared among the founding members of the
-                  project.
+                  Because 100% of NounBR auction proceeds are sent to NounsBR DAO, NoundersBR have
+                  chosen to compensate themselves with NounsBR. Every 10th NounBR for the first 5
+                  years of the project (NounBR ids #0, #10, #20, #30 and so on) will be
+                  automatically sent to the NounderBR's multisig to be vested and shared among the
+                  founding members of the project.
                 </Trans>
               </p>
               <p>
                 <Trans>
-                  NounderBR distributions don't interfere with the cadence of 15 minutes auctions. NounsBR are sent directly to the NounderBR's Multisig, and auctions continue on schedule with the next available NounBR ID.
+                  NounderBR distributions don't interfere with the cadence of 15 minutes auctions.
+                  NounsBR are sent directly to the NounderBR's Multisig, and auctions continue on
+                  schedule with the next available NounBR ID.
                 </Trans>
               </p>
             </Accordion.Body>

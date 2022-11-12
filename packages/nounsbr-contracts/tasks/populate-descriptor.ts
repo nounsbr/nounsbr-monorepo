@@ -3,12 +3,7 @@ import ImageData from '../files/image-data-v2.json';
 import { dataToDescriptorInput } from './utils';
 
 task('populate-descriptor', 'Populates the descriptor with color palettes and NounBR parts')
-  .addOptionalParam(
-    'nftDescriptor',
-    'The `NFTDescriptorV2` contract address',
-    '',
-    types.string,
-  )
+  .addOptionalParam('nftDescriptor', 'The `NFTDescriptorV2` contract address', '', types.string)
   .addOptionalParam(
     'nounsbrDescriptor',
     'The `NounsBRDescriptorV2` contract address',

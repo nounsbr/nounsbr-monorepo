@@ -58,7 +58,9 @@ task(
   console.log(
     `NounBR contracts deployed to local node at http://localhost:8545 (Chain ID: ${chainId})`,
   );
-  console.log(`Auction House Proxy address: ${contracts.NounsBRAuctionHouseProxy.instance.address}`);
+  console.log(
+    `Auction House Proxy address: ${contracts.NounsBRAuctionHouseProxy.instance.address}`,
+  );
   console.log(`NounsBR ERC721 address: ${contracts.NounsBRToken.instance.address}`);
   console.log(`NounsBR DAO Executor address: ${contracts.NounsBRDAOExecutor.instance.address}`);
   console.log(`NounsBR DAO Proxy address: ${contracts.NounsBRDAOProxyV2.instance.address}`);

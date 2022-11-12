@@ -72,7 +72,10 @@ export const getPseudorandomPart = (
  * @param nounbrId The NounBR tokenId used to create pseudorandomness
  * @param blockHash The block hash use to create pseudorandomness
  */
-export const getNounBRSeedFromBlockHash = (nounbrId: BigNumberish, blockHash: string): NounBRSeed => {
+export const getNounBRSeedFromBlockHash = (
+  nounbrId: BigNumberish,
+  blockHash: string,
+): NounBRSeed => {
   const pseudorandomness = solidityKeccak256(['bytes32', 'uint256'], [blockHash, nounbrId]);
   return {
     background: getPseudorandomPart(pseudorandomness, bgcolors.length, 0),

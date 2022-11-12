@@ -33,7 +33,13 @@ contract NounsBRDAOLogicV2Test is Test, DeployUtils {
 
         NounsBRDescriptorV2 descriptor = _deployAndPopulateV2();
 
-        nounsbrToken = new NounsBRToken(noundersbrDAO, minter, descriptor, new NounsBRSeeder(), IProxyRegistry(address(0)));
+        nounsbrToken = new NounsBRToken(
+            noundersbrDAO,
+            minter,
+            descriptor,
+            new NounsBRSeeder(),
+            IProxyRegistry(address(0))
+        );
 
         daoProxy = NounsBRDAOLogicV2(
             payable(

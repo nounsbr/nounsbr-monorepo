@@ -16,7 +16,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <NounsBRI18nProvider locale={locale} forceRenderAfterLocaleChange={true} onActivate={onActivate}>
+    <NounsBRI18nProvider
+      locale={locale}
+      forceRenderAfterLocaleChange={true}
+      onActivate={onActivate}
+    >
       {children}
     </NounsBRI18nProvider>
   );
