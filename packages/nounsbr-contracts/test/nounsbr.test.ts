@@ -2,7 +2,10 @@ import chai from 'chai';
 import { ethers } from 'hardhat';
 import { BigNumber as EthersBN, constants } from 'ethers';
 import { solidity } from 'ethereum-waffle';
-import { NounsBRDescriptorV2__factory as NounsBRDescriptorV2Factory, NounsBRToken } from '../typechain';
+import {
+  NounsBRDescriptorV2__factory as NounsBRDescriptorV2Factory,
+  NounsBRToken,
+} from '../typechain';
 import { deployNounsBRToken, populateDescriptorV2 } from './utils';
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers';
 
@@ -114,7 +117,7 @@ describe('NounsBRToken', () => {
   describe('contractURI', async () => {
     it('should return correct contractURI', async () => {
       expect(await nounsbrToken.contractURI()).to.eq(
-        'ipfs://QmZi1n79FqWt2tTLwCqiy6nLM6xLGRsEPQ5JmReJQKNNzX',
+        'ipfs://bafkreidlljxwtx4a26kkapf3gxnrfho2lug3vwlbrmztb5rsyubw3fvpce',
       );
     });
     it('should allow owner to set contractURI', async () => {
