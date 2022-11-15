@@ -146,7 +146,6 @@ abstract contract NounsBRDAOLogicV1V2StateTest is NounsBRDAOLogicSharedBaseTest 
         address forVoter = utils.getNextUserAddress();
         mint(forVoter, 4);
 
-        vm.deal(address(timelock), 100);
         uint256 proposalId = propose(address(0x1234), 100, '', '');
         vm.expectRevert('NounsBRDAO::execute: proposal can only be executed if it is queued');
         daoProxy.execute(proposalId);
@@ -165,6 +164,7 @@ abstract contract NounsBRDAOLogicV1V2StateTest is NounsBRDAOLogicSharedBaseTest 
         daoProxy.execute(proposalId);
 
         vm.warp(block.timestamp + timelock.delay() + 1);
+        vm.deal(address(timelock), 100);
         daoProxy.execute(proposalId);
 
         assertTrue(daoProxy.state(proposalId) == NounsBRDAOStorageV1.ProposalState.Executed);

@@ -1,6 +1,6 @@
 {
   "name": "@nounsbr/assets",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "NounsBR run-length encoded image data",
   "author": "NoundersBR",
   "homepage": "https://nounsbr.wtf",
@@ -17,7 +17,7 @@
     "test": "mocha -r ts-node/register \"test/**/*.test.ts\""
   },
   "devDependencies": {
-    "@nounsbr/sdk": "^0.2.0",
+    "@nounsbr/sdk": "^0.3.0",
     "@types/pngjs": "^6.0.1",
     "chai": "^4.2.0",
     "mocha": "^8.4.0",
