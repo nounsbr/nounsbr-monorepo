@@ -136,7 +136,7 @@ export const bidsByAuctionQuery = (auctionId: string) => gql`
 
 export const nounbrQuery = (id: string) => gql`
  {
-	nounbr(id:"${id}") {
+	nounBR(id:"${id}") {
 	  id
 	  seed {
 	  background
@@ -154,7 +154,7 @@ export const nounbrQuery = (id: string) => gql`
 
 export const nounsbrIndex = () => gql`
   {
-    nounsbr {
+    nounBRs {
       id
       owner {
         id
@@ -221,7 +221,7 @@ export const latestBidsQuery = (first: number = 10) => gql`
 
 export const nounbrVotingHistoryQuery = (nounbrId: number) => gql`
 {
-	nounbr(id: ${nounbrId}) {
+	nounBR(id: ${nounbrId}) {
 		id
 		votes {
       blockNumber
