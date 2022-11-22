@@ -26,7 +26,7 @@ export interface NormalizedNounBR {
 
 const nounsbrGql = `
 {
-  nounsbr {
+  nounBRs {
     id
     owner {
       id
@@ -64,12 +64,12 @@ export const normalizeSeed = (seed: any): Seed => ({
   head: Number(seed.head),
 });
 
-export const normalizeNounBR = (nounbr: any): NormalizedNounBR => ({
-  id: Number(nounbr.id),
-  owner: nounbr.owner.id,
-  delegatedTo: nounbr.owner.delegate?.id,
-  votes: normalizeVotes(nounbr.votes),
-  seed: normalizeSeed(nounbr.seed),
+export const normalizeNounBR = (nounBR: any): NormalizedNounBR => ({
+  id: Number(nounBR.id),
+  owner: nounBR.owner.id,
+  delegatedTo: nounBR.owner.delegate?.id,
+  votes: normalizeVotes(nounBR.votes),
+  seed: normalizeSeed(nounBR.seed),
 });
 
 export const normalizeNounsBR = R.map(normalizeNounBR);
@@ -77,13 +77,13 @@ export const normalizeNounsBR = R.map(normalizeNounBR);
 export const normalizeVotes = R.map(normalizeVote);
 
 export const ownerFilterFactory = (address: string) =>
-  R.filter((nounbr: any) => bigNumbersEqual(address, nounbr.owner));
+  R.filter((nounBR: any) => bigNumbersEqual(address, nounBR.owner));
 
 export const isNounBROwner = (address: string, nounsbr: NormalizedNounBR[]) =>
   ownerFilterFactory(address)(nounsbr).length > 0;
 
 export const delegateFilterFactory = (address: string) =>
-  R.filter((nounbr: any) => nounbr.delegatedTo && bigNumbersEqual(address, nounbr.delegatedTo));
+  R.filter((nounBR: any) => nounBR.delegatedTo && bigNumbersEqual(address, nounBR.delegatedTo));
 
 export const isNounBRDelegate = (address: string, nounsbr: NormalizedNounBR[]) =>
   delegateFilterFactory(address)(nounsbr).length > 0;
