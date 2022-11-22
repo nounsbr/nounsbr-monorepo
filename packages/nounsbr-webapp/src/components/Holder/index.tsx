@@ -32,7 +32,7 @@ const Holder: React.FC<HolderProps> = props => {
     );
   }
 
-  const holder = data && data.nounbr.owner.id;
+  const holder = data && data.nounBR.owner.id;
 
   const nonNounderBRNounBRContent = (
     <a
