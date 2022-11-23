@@ -86,7 +86,7 @@ const useNounBRProposalVoteEvents = (nounbrId: number): NounBRProfileEventFetche
     };
   }
 
-  const nounbrVotes: { [key: string]: NounBRVoteHistory } = data.nounbr.votes
+  const nounbrVotes: { [key: string]: NounBRVoteHistory } = data.nounBR.votes
     .slice(0)
     .reduce((acc: any, h: NounBRVoteHistory, i: number) => {
       acc[h.proposal.id] = h;
