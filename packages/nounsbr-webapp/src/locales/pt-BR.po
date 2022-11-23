@@ -53,7 +53,7 @@ msgstr "<0> NounBR {0} </0> enviado para <1><2/></1>"
 #: src/components/profileEvent/event/DesktopNounBRWinEvent/index.tsx
 #: src/components/profileEvent/event/MobileNounBRWinEvent/index.tsx
 msgid "<0> NounBR {0} </0> won by <1><2/></1>"
-msgstr "<0> NounBR {0} </0> vencido por <1><2/></1>"
+msgstr "<0> NounBR {0} </0> conquistado por <1><2/></1>"
 
 #: src/components/ByLineHoverCard/index.tsx
 msgid "<0>Delegated NounBR: </0>"
@@ -730,7 +730,7 @@ msgstr "Proposta Executada!"
 
 #: src/pages/Vote/index.tsx
 msgid "Proposal Queued!"
-msgstr "Proposta Enfileirada!"
+msgstr "Proposta em Fila!"
 
 #: src/components/ProposalHeader/index.tsx
 msgid "Proposal {0}"
@@ -750,13 +750,13 @@ msgstr "Transações Propostas"
 
 #: src/pages/Vote/index.tsx
 msgid "Queue"
-msgstr "Fila"
+msgstr "Colocar em Fila"
 
 #: src/components/NounBRProfileVoteRow/index.tsx
 #: src/components/ProposalStatus/index.tsx
 #: src/components/ProposalStatusCopy/index.tsx
 msgid "Queued"
-msgstr "Enfileirada"
+msgstr "Em Fila"
 
 #: src/pages/Vote/index.tsx
 msgid "Quorum"

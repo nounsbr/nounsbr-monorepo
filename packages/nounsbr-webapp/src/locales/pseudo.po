@@ -511,10 +511,6 @@ msgstr ""
 msgid "Holder changed from<0><1/></0> to <2><3/></2>"
 msgstr ""
 
-#: src/components/Documentation/index.tsx
-#~ msgid "In addition to the precautions taken by Compound Governance, NoundersBR have given themselves a special veto right to ensure that no malicious proposals can be passed while the NounBR supply is low. This veto right will only be used if an obviously harmful governance proposal has been passed, and is intended as a last resort."
-#~ msgstr ""
-
 #: src/components/Bid/index.tsx
 msgid "Insufficient bid amount 🤏"
 msgstr ""

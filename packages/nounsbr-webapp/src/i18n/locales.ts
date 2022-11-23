@@ -1,6 +1,6 @@
-import en, { Locale as DaysJSLocale } from 'dayjs/locale/en';
+import pt, { Locale as DaysJSLocale } from 'dayjs/locale/pt';
+import en from 'dayjs/locale/en';
 import ja from 'dayjs/locale/ja';
-import pt from 'dayjs/locale/pt';
 
 export const SUPPORTED_LOCALES = [
   // order as they appear in the language dropdown

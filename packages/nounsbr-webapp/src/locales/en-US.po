@@ -1357,3 +1357,5 @@ msgid "make upgrades to critical smart contracts without undergoing an audit"
 msgstr "make upgrades to critical smart contracts without undergoing an audit"
 
 
+msgid "artists and entrepreuners"
+msgstr "artists and entrepreuners"
