@@ -1338,7 +1338,7 @@ msgstr "When a project passes an on-chain vote, the creator of that proposal wil
 
 #: src/components/NavBar/index.tsx
 msgid "About"
-msgstr "Sobre"
+msgstr "About"
 
 #: src/components/Documentation/index.tsx
 msgid "unequally withdraw the treasury for personal gain"
