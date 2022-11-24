@@ -32,7 +32,7 @@ task('deploy-and-configure', 'Deploy and configure all contracts with short gov 
   .addOptionalParam(
     'auctionDuration',
     'The auction duration (seconds)',
-    60 * 10 /* 10 minutes */,
+    60 * 15 /* 15 minutes */,
     types.int,
   )
   .addOptionalParam('timelockDelay', 'The timelock delay (seconds)', 60 /* 1 min */, types.int)
