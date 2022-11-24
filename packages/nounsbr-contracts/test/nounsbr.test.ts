@@ -117,7 +117,7 @@ describe('NounsBRToken', () => {
   describe('contractURI', async () => {
     it('should return correct contractURI', async () => {
       expect(await nounsbrToken.contractURI()).to.eq(
-        'ipfs://bafkreidlljxwtx4a26kkapf3gxnrfho2lug3vwlbrmztb5rsyubw3fvpce',
+        'ipfs://Qmb4fSbjVdegkSyb28AKhJowvuQcHehBAvHY7dA4eyXNQq',
       );
     });
     it('should allow owner to set contractURI', async () => {

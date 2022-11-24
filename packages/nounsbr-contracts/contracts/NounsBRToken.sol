@@ -55,7 +55,7 @@ contract NounsBRToken is INounsBRToken, Ownable, ERC721Checkpointable {
     uint256 private _currentNounBRId;
 
     // IPFS content hash of contract-level metadata
-    string private _contractURIHash = 'bafkreib7xn2donx44j27iro6b5ronollvfsjaz4g5fbjq26tmi47wev3ha';
+    string private _contractURIHash = 'Qmb4fSbjVdegkSyb28AKhJowvuQcHehBAvHY7dA4eyXNQq';
 
     // OpenSea's Proxy Registry
     IProxyRegistry public immutable proxyRegistry;

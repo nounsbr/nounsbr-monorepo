@@ -22,10 +22,10 @@
     "create:localnode": "graph create --node http://localhost:8020/",
     "deploy": "graph deploy --debug --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/",
     "deploy:localnode": "graph deploy --debug --node http://localhost:8020/ --ipfs http://localhost:5001/",
-    "deploy:hardhat": "yarn clean && yarn prepare:hardhat && yarn codegen && yarn create:localnode nounsbrdao/nounsbr-subgraph && yarn deploy:localnode nounsbrdao/nounsbr-subgraph",
+    "deploy:hardhat": "yarn clean && yarn prepare:hardhat && yarn codegen && yarn create:localnode nounsbr/nounsbr-testnet && yarn deploy:localnode nounsbr/nounsbr-testnet",
     "deploy:rinkeby": "yarn clean && yarn prepare:rinkeby && yarn codegen && yarn deploy nounsbr/nounsbr-subgraph-rinkeby",
     "deploy:mainnet": "yarn clean && yarn prepare:mainnet && yarn codegen && yarn deploy nounsbr/nounsbr-subgraph",
-    "deploy:goerli": "yarn clean && yarn prepare:goerli && yarn codegen && yarn deploy nounsbr/nounsbr-subgraph-testnetgoerli",
+    "deploy:goerli": "yarn clean && yarn prepare:goerli && yarn codegen && yarn deploy nounsbr/nounsbr-testnet",
     "mustache": "mustache"
   },
   "devDependencies": {
