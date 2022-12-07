@@ -750,7 +750,7 @@ msgstr "Transações Propostas"
 
 #: src/pages/Vote/index.tsx
 msgid "Queue"
-msgstr "Colocar em Fila"
+msgstr "Enfileirar"
 
 #: src/components/NounBRProfileVoteRow/index.tsx
 #: src/components/ProposalStatus/index.tsx
