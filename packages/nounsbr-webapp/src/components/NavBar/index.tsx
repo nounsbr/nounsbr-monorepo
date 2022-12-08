@@ -58,7 +58,7 @@ const NavBar = () => {
             <Navbar.Brand as={Link} to="/" className={classes.navBarBrand}>
               <img src={logo} className={classes.navBarLogo} alt="NounsBR DAO logo" />
             </Navbar.Brand>
-            {Number(CHAIN_ID) !== 1 && <Nav.Item>*</Nav.Item>}
+            {Number(CHAIN_ID) !== 1 && <Nav.Item></Nav.Item>}
             <Nav.Item>
               {treasuryBalance && (
                 <Nav.Link
