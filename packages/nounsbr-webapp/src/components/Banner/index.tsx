@@ -1,7 +1,7 @@
 import classes from './Banner.module.css';
 import Section from '../../layout/Section';
 import { Col } from 'react-bootstrap';
-import carmen_miranda from '../../assets/carmen_miranda.png';
+import nounsbr_banner from '../../assets/nounsbr_banner.jpeg';
 import NounBR from '../NounBR';
 import { Trans } from '@lingui/macro';
 
@@ -21,7 +21,7 @@ const Banner = () => {
       </Col>
       <Col lg={6}>
         <div style={{ padding: '2rem' }}>
-          <NounBR imgPath={carmen_miranda} alt="nounbr" />
+          <NounBR imgPath={nounsbr_banner} alt="nounbr" />
         </div>
       </Col>
     </Section>
