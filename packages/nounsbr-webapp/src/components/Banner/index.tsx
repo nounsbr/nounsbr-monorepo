@@ -1,7 +1,7 @@
 import classes from './Banner.module.css';
 import Section from '../../layout/Section';
 import { Col } from 'react-bootstrap';
-import nounsbr_banner from '../../assets/nounsbr_banner.jpeg';
+import nounsbr_banner from '../../assets/nounsbr_banner.jpg';
 import NounBR from '../NounBR';
 import { Trans } from '@lingui/macro';
 
