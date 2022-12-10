@@ -32,19 +32,14 @@ const NOUNSBR_ART_NONCE_OFFSET = 4;
 const AUCTION_HOUSE_PROXY_NONCE_OFFSET = 9;
 const GOVERNOR_N_DELEGATOR_NONCE_OFFSET = 12;
 
-task('deploy', 'Deploy all NounsBR contracts with short gov times for testing')
+task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and NounsBRToken')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
   .addOptionalParam('weth', 'The WETH contract address', undefined, types.string)
-  .addOptionalParam(
-    'noundersbrdao',
-    'The noundersbr DAO contract address',
-    '0x3c68309658218f9eE50E659390b3C23A4F5c1400',
-    types.string,
-  )
+  .addOptionalParam('noundersbrdao', 'The noundersbr DAO contract address', undefined, types.string)
   .addOptionalParam(
     'auctionTimeBuffer',
     'The auction time buffer (seconds)',
-    60 /* 60 seconds */,
+    1.5 * 60 /* 5 minutes */,
     types.int,
   )
   .addOptionalParam(
@@ -62,17 +57,27 @@ task('deploy', 'Deploy all NounsBR contracts with short gov times for testing')
   .addOptionalParam(
     'auctionDuration',
     'The auction duration (seconds)',
-    60 * 15 /* 15 minutes */,
+    60 * 60 * 0.25 /* 15 min */,
     types.int,
   )
-  .addOptionalParam('timelockDelay', 'The timelock delay (seconds)', 60 /* 1 min */, types.int)
+  .addOptionalParam(
+    'timelockDelay',
+    'The timelock delay (seconds)',
+    60 * 60 * 24 * 2 /* 2 days */,
+    types.int,
+  )
   .addOptionalParam(
     'votingPeriod',
     'The voting period (blocks)',
-    80 /* 20 min (15s blocks) */,
+    Math.round(4 * 60 * 24 * (60 / 13)) /* 4 days (13s blocks) */,
     types.int,
   )
-  .addOptionalParam('votingDelay', 'The voting delay (blocks)', 1, types.int)
+  .addOptionalParam(
+    'votingDelay',
+    'The voting delay (blocks)',
+    Math.round(3 * 60 * 24 * (60 / 13)) /* 3 days (13s blocks) */,
+    types.int,
+  )
   .addOptionalParam(
     'proposalThresholdBps',
     'The proposal threshold (basis points)',
@@ -80,18 +85,11 @@ task('deploy', 'Deploy all NounsBR contracts with short gov times for testing')
     types.int,
   )
   .addOptionalParam(
-    'minQuorumVotesBPS',
-    'Min basis points input for dynamic quorum',
-    1_000,
+    'quorumVotesBps',
+    'Votes required for quorum (basis points)',
+    1_000 /* 10% */,
     types.int,
-  ) // Default: 10%
-  .addOptionalParam(
-    'maxQuorumVotesBPS',
-    'Max basis points input for dynamic quorum',
-    4_000,
-    types.int,
-  ) // Default: 40%
-  .addOptionalParam('quorumCoefficient', 'Dynamic quorum coefficient (float)', 1, types.float)
+  )
   .setAction(async (args, { ethers }) => {
     const network = await ethers.provider.getNetwork();
     const [deployer] = await ethers.getSigners();

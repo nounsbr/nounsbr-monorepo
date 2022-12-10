@@ -65,7 +65,7 @@ contract NounsBRDAOLogicV2 is NounsBRDAOStorageV2, NounsBRDAOEventsV2 {
     uint256 public constant MAX_PROPOSAL_THRESHOLD_BPS = 1_000; // 1,000 basis points or 10%
 
     /// @notice The minimum setable voting period
-    uint256 public constant MIN_VOTING_PERIOD = 80; // About 24 hours
+    uint256 public constant MIN_VOTING_PERIOD = 5_760; // About 24 hours
 
     /// @notice The max setable voting period
     uint256 public constant MAX_VOTING_PERIOD = 80_640; // About 2 weeks

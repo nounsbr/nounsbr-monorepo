@@ -1,67 +1,24 @@
 import { task, types } from 'hardhat/config';
 import { printContractsTable } from './utils';
 
-task('deploy-and-configure', 'Deploy and configure all contracts with short gov times for testing')
+task('deploy-and-configure', 'Deploy and configure all contracts')
   .addFlag('startAuction', 'Start the first auction upon deployment completion')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
   .addFlag('updateConfigs', 'Write the deployed addresses to the SDK and subgraph configs')
   .addOptionalParam('weth', 'The WETH contract address')
-  .addOptionalParam(
-    'noundersbrdao',
-    'The noundersbr DAO contract address',
-    '0x3c68309658218f9eE50E659390b3C23A4F5c1400',
-  )
-  .addOptionalParam(
-    'auctionTimeBuffer',
-    'The auction time buffer (seconds)',
-    30 /* 30 seconds */,
-    types.int,
-  )
-  .addOptionalParam(
-    'auctionReservePrice',
-    'The auction reserve price (wei)',
-    1 /* 1 wei */,
-    types.int,
-  )
+  .addOptionalParam('noundersbrdao', 'The nounders DAO contract address')
+  .addOptionalParam('auctionTimeBuffer', 'The auction time buffer (seconds)', 1.5 * 60, types.int) //Default ever 24 hrs Revised: every 15 minutes
+  .addOptionalParam('auctionReservePrice', 'The auction reserve price (wei)')
   .addOptionalParam(
     'auctionMinIncrementBidPercentage',
     'The auction min increment bid percentage (out of 100)',
-    2 /* 2% */,
-    types.int,
   )
-  .addOptionalParam(
-    'auctionDuration',
-    'The auction duration (seconds)',
-    60 * 15 /* 15 minutes */,
-    types.int,
-  )
-  .addOptionalParam('timelockDelay', 'The timelock delay (seconds)', 60 /* 1 min */, types.int)
-  .addOptionalParam(
-    'votingPeriod',
-    'The voting period (blocks)',
-    80 /* 20 min (15s blocks) */,
-    types.int,
-  )
-  .addOptionalParam('votingDelay', 'The voting delay (blocks)', 1, types.int)
-  .addOptionalParam(
-    'proposalThresholdBps',
-    'The proposal threshold (basis points)',
-    100 /* 1% */,
-    types.int,
-  )
-  .addOptionalParam(
-    'minQuorumVotesBPS',
-    'Min basis points input for dynamic quorum',
-    1_000,
-    types.int,
-  ) // Default: 10%
-  .addOptionalParam(
-    'maxQuorumVotesBPS',
-    'Max basis points input for dynamic quorum',
-    4_000,
-    types.int,
-  ) // Default: 40%
-  .addOptionalParam('quorumCoefficient', 'Dynamic quorum coefficient (float)', 1, types.float)
+  .addOptionalParam('auctionDuration', 'The auction duration (seconds)', 60 * 60 * 0.25, types.int) // Default: 1 day Revised: 15 minutes
+  .addOptionalParam('timelockDelay', 'The timelock delay (seconds)')
+  .addOptionalParam('votingPeriod', 'The voting period (blocks)')
+  .addOptionalParam('votingDelay', 'The voting delay (blocks)')
+  .addOptionalParam('proposalThresholdBps', 'The proposal threshold (basis points)')
+  .addOptionalParam('quorumVotesBps', 'Votes required for quorum (basis points)')
   .setAction(async (args, { run }) => {
     // Deploy the NounsBR DAO contracts and return deployment information
     const contracts = await run('deploy', args);
