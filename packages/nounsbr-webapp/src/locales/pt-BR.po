@@ -904,7 +904,7 @@ msgid "The playground was built using the {nounsbrProtocolLink}. NounBR's traits
 msgstr "O playground foi construído usando o {nounsbrProtocolLink}. Os Traits do NounBR são determinados pela Semente NounBR. A semente foi gerada usando {nounsbrAssetsLink} e renderizada usando {nounsbrSDKLink}."
 
 #: src/components/Documentation/index.tsx
-msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:)"
+msgid "Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:"
 msgstr "No que se relaciona ao direito à veto dos fundadores, a NounsBR DAO seguirá os exatos termos aplicados pela Nouns DAO em relação ao tema, conforme o texto abaixo:"
 
 #: src/components/Documentation/index.tsx
