@@ -153,7 +153,7 @@ const Documentation = () => {
             <Accordion.Body>
               <p>
                 <Trans>
-                (Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:)
+                  Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:
                 </Trans>
               </p>
               <p>

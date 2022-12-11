@@ -903,11 +903,9 @@ msgstr "As partes comprimidas são convertidas de forma eficiente em uma única 
 msgid "The playground was built using the {nounsbrProtocolLink}. NounBR's traits are determined by the NounBR Seed. The seed was generated using {nounsbrAssetsLink} and rendered using the {nounsbrSDKLink}."
 msgstr "O playground foi construído usando o {nounsbrProtocolLink}. Os Traits do NounBR são determinados pela Semente NounBR. A semente foi gerada usando {nounsbrAssetsLink} e renderizada usando {nounsbrSDKLink}."
 
-
-
 #: src/components/Documentation/index.tsx
-msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:) "
-msgstr "No que se relaciona ao direito à veto dos fundadores, a NounsBR DAO seguirá os exatos termos aplicados pela Nouns DAO em relação ao tema, conforme o texto abaixo: "
+msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:)"
+msgstr "No que se relaciona ao direito à veto dos fundadores, a NounsBR DAO seguirá os exatos termos aplicados pela Nouns DAO em relação ao tema, conforme o texto abaixo:"
 
 #: src/components/Documentation/index.tsx
 msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
