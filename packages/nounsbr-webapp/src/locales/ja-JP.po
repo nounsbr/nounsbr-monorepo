@@ -23,7 +23,7 @@ msgid "% of NounsBR Currently Against"
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "'NoundersBR' are the group of 3 brazilian artists and entrepreneurs that initiated NounsBR. Here are the NoundersBR:"
+msgid "'NoundersBR' are a group of brazilian artists and entrepreneurs that initiated NounsBR. Here are the NoundersBR:"
 msgstr "「NoundersBR」とはNounsBRの創業に携わった10人の創業者のことであり、以下の人物で構成されています："
 
 #: src/components/ByLineHoverCard/index.tsx

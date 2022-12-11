@@ -311,7 +311,7 @@ const Documentation = () => {
             <Accordion.Body>
               <p>
                 <Trans>
-                  'NoundersBR' are the group of 3 brazilian artists and entrepreneurs that initiated
+                  'NoundersBR' are a group of brazilian artists and entrepreneurs that initiated
                   NounsBR. Here are the NoundersBR:
                 </Trans>
               </p>

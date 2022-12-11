@@ -18,8 +18,8 @@ msgid "% of NounsBR Currently Against"
 msgstr "% de NounsBR Atualmente Contra"
 
 #: src/components/Documentation/index.tsx
-msgid "'NoundersBR' are the group of 3 brazilian artists and entrepreneurs that initiated NounsBR. Here are the NoundersBR:"
-msgstr "NoundersBR' é o grupo de 3 artistas e empreendedores brasileiros que iniciaram a NounsBR. Estes são os NoundersBR:"
+msgid "'NoundersBR' are a group of brazilian artists and entrepreneurs that initiated NounsBR. Here are the NoundersBR:"
+msgstr "NoundersBR' é um grupo de artistas e empreendedores brasileiros que iniciaram a NounsBR. Estes são os NoundersBR:"
 
 #: src/components/ByLineHoverCard/index.tsx
 msgid "... and {0} more"
