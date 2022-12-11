@@ -271,10 +271,6 @@ msgstr ""
 msgid "Connect your wallet"
 msgstr ""
 
-#: src/components/Documentation/index.tsx
-msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
-msgstr ""
-
 #: src/components/CreateProposalButton/index.tsx
 #: src/pages/CreateProposal/index.tsx
 msgid "Create Proposal"
@@ -892,13 +888,44 @@ msgstr ""
 #: src/components/Documentation/index.tsx
 msgid "The NounsBR Auction Contract will act as a self-sufficient NounBR generation and distribution mechanism, auctioning one NounBR every 15 minutes, forever. 100% of auction proceeds (ETH) are automatically deposited in the NounsBR DAO treasury, where they are governed by NounBR owners."
 msgstr ""
+#: src/components/Documentation/index.tsx
+msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:) "
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "The NounsBR community has undertaken a preliminary exploration of proposal veto alternatives (‘rage quit’ etc.), but it is now clear that this is a difficult problem that will require significantly more research, development and testing before a satisfactory solution can be implemented."
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
+msgstr ""
 
 #: src/components/Documentation/index.tsx
 msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "The NounsBR community has undertaken a preliminary exploration of proposal veto alternatives (‘rage quit’ etc.), but it is now clear that this is a difficult problem that will require significantly more research, development and testing before a satisfactory solution can be implemented."
+msgid "unequally withdraw the treasury for personal gain"
+msgstr "unequally withdraw the treasury for personal gain"
+
+#: src/components/NavBar/index.tsx
+msgid "bribe voters to facilitate withdraws of the treasury for personal gain"
+msgstr "bribe voters to facilitate withdraws of the treasury for personal gain"
+
+#: src/components/NavBar/index.tsx
+msgid "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
+msgstr "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
+
+#: src/components/NavBar/index.tsx
+msgid "make upgrades to critical smart contracts without undergoing an audit"
+msgstr "make upgrades to critical smart contracts without undergoing an audit"
+
+#: src/components/Documentation/index.tsx
+msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
 msgstr ""
 
 #: src/components/DynamicQuorumInfoModal/index.tsx
@@ -918,15 +945,7 @@ msgid "The playground was built using the {nounsbrProtocolLink}. NounBR's traits
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
-msgstr ""
-
-#: src/components/Documentation/index.tsx
 msgid "The treasury is controlled exclusively by NounsBR via governance."
-msgstr ""
-
-#: src/components/Documentation/index.tsx
-msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
 msgstr ""
 
 #: src/components/VoteModal/index.tsx
@@ -1169,7 +1188,7 @@ msgid "Your <0>{availableVotes}</0> votes have been delegated to a new account."
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "accessories (140)"
+msgid "accessories (24)"
 msgstr ""
 
 #: src/components/AuctionTimer/index.tsx
@@ -1185,11 +1204,11 @@ msgid "backgrounds (2)"
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "bodies (30)"
+msgid "bodies (16)"
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "glasses (23)"
+msgid "glasses (13)"
 msgstr ""
 
 #: src/components/AuctionTimer/index.tsx
@@ -1197,7 +1216,7 @@ msgid "h"
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "heads (242)"
+msgid "heads (40)"
 msgstr ""
 
 #: src/components/AuctionTimer/index.tsx
@@ -1339,20 +1358,3 @@ msgstr "When a project passes an on-chain vote, the creator of that proposal wil
 #: src/components/NavBar/index.tsx
 msgid "About"
 msgstr "About"
-
-#: src/components/Documentation/index.tsx
-msgid "unequally withdraw the treasury for personal gain"
-msgstr "unequally withdraw the treasury for personal gain"
-
-#: src/components/NavBar/index.tsx
-msgid "bribe voters to facilitate withdraws of the treasury for personal gain"
-msgstr "bribe voters to facilitate withdraws of the treasury for personal gain"
-
-#: src/components/NavBar/index.tsx
-msgid "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
-msgstr "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
-
-#: src/components/NavBar/index.tsx
-msgid "make upgrades to critical smart contracts without undergoing an audit"
-msgstr "make upgrades to critical smart contracts without undergoing an audit"
-

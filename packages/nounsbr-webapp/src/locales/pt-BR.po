@@ -271,10 +271,6 @@ msgstr "Conectar a carteira para criar uma proposta."
 msgid "Connect your wallet"
 msgstr "Conecte sua carteira"
 
-#: src/components/Documentation/index.tsx
-msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
-msgstr "Consequentemente, a Fundação NounsBR antecipa ser a administradora do poder de veto até que a NounsBR DAO esteja pronta para implementar uma alternativa e, portanto, deseja esclarecer as condições sob as quais exerceria esse poder."
-
 #: src/components/CreateProposalButton/index.tsx
 #: src/pages/CreateProposal/index.tsx
 msgid "Create Proposal"
@@ -482,7 +478,7 @@ msgstr "Governança"
 
 #: src/components/Documentation/index.tsx
 msgid "Governance ‘Slow Start’"
-msgstr "Governança ‘Inicio Lento’"
+msgstr "Governança ‘início lento’,"
 
 #: src/components/DelegationCandidateInfo/index.tsx
 msgid "Has"
@@ -891,14 +887,6 @@ msgstr "A recompensa da NoundersBR destina-se a compensar nossas contribuições
 msgid "The NounsBR Auction Contract will act as a self-sufficient NounBR generation and distribution mechanism, auctioning one NounBR every 15 minutes, forever. 100% of auction proceeds (ETH) are automatically deposited in the NounsBR DAO treasury, where they are governed by NounBR owners."
 msgstr "O Contrato de Leilão NounsBR funcionará como um mecanismo autossuficiente de geração e distribuição de um NounBR, leiloando um NounBR a cada 15 minutos, para sempre. 100% dos rendimentos do leilão (ETH) são depositados automaticamente no tesouro da NounsBR DAO, onde são regidos pelos proprietários do NounBR."
 
-#: src/components/Documentation/index.tsx
-msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
-msgstr "A Fundação NounsBR e a NounsBR DAO consideram o veto um poder emergencial que não deve ser exercido no curso normal dos negócios. A NounsBR DAO vetará propostas que apresentem riscos jurídicos ou existenciais não triviais a NounsBR DAO, incluindo (mas não necessariamente limitado a) propostas que:"
-
-#: src/components/Documentation/index.tsx
-msgid "The NounsBR community has undertaken a preliminary exploration of proposal veto alternatives (‘rage quit’ etc.), but it is now clear that this is a difficult problem that will require significantly more research, development and testing before a satisfactory solution can be implemented."
-msgstr "A comunidade NounsBR empreendeu uma exploração preliminar das alternativas de veto da proposta (‘rage quit’ etc.), mas agora está claro que este é um problema difícil que exigirá significativamente mais pesquisa, desenvolvimento e testes antes que uma solução satisfatória possa ser implementada."
-
 #: src/components/DynamicQuorumInfoModal/index.tsx
 msgid "The Quorum (minimum number of For votes required to pass a proposal) is set as a function of the number of Against votes a proposal has recieved. It increases quadratically as a function of the % of NounsBR voting against a prop, varying between Min Quorum and Max Quorum."
 msgstr "O Quórum (número mínimo de votos a favor necessários para aprovar uma proposta) é definido em função do número de votos contra que uma proposta recebeu. Ele aumenta quadraticamente em função da % de votos de NounsBR contra uma proposta, variando entre Min Quórum e Max Quórum."
@@ -915,17 +903,51 @@ msgstr "As partes comprimidas são convertidas de forma eficiente em uma única 
 msgid "The playground was built using the {nounsbrProtocolLink}. NounBR's traits are determined by the NounBR Seed. The seed was generated using {nounsbrAssetsLink} and rendered using the {nounsbrSDKLink}."
 msgstr "O playground foi construído usando o {nounsbrProtocolLink}. Os Traits do NounBR são determinados pela Semente NounBR. A semente foi gerada usando {nounsbrAssetsLink} e renderizada usando {nounsbrSDKLink}."
 
+
+
+#: src/components/Documentation/index.tsx
+msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:) "
+msgstr "No que se relaciona ao direito à veto dos fundadores, a NounsBR DAO seguirá os exatos termos aplicados pela Nouns DAO em relação ao tema, conforme o texto abaixo: "
+
 #: src/components/Documentation/index.tsx
 msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
-msgstr "O direito de veto da proposta foi inicialmente concebido como uma solução temporária para o problema dos ‘ataques de 51%’ ao tesouro da NounsBR DAO. Embora os NoundersBR inicialmente acreditassem que uma distribuição saudável de NounsBR seria proteção suficiente para a DAO, uma compreensão mais completa dos incentivos e riscos levou a um consenso geral dentro dos NoundersBR, da Fundação NounsBR e da comunidade mais ampla de que um jogo mais robusto solução teórica deve ser implementada antes que o direito seja removido."
+msgstr "O direito de veto da proposta foi inicialmente concebido como uma solução temporária para o problema dos ‘ataques de 51%’ ao tesouro da Nouns DAO. Embora os Nounders inicialmente acreditassem que uma distribuição saudável de Nouns seria proteção suficiente para a DAO, uma compreensão mais completa dos incentivos e riscos levou a um consenso geral dentro dos Nounders, da Fundação Nouns e de toda a comunidade, de que uma solução mais robusta baseada na teoria dos jogos deve ser implementada antes que o direito seja removido."
+
+#: src/components/Documentation/index.tsx
+msgid "The NounsBR community has undertaken a preliminary exploration of proposal veto alternatives (‘rage quit’ etc.), but it is now clear that this is a difficult problem that will require significantly more research, development and testing before a satisfactory solution can be implemented."
+msgstr "A comunidade Nouns empreendeu uma exploração preliminar das alternativas de veto da proposta (‘rage quit’ etc.), mas agora está claro que este é um problema difícil que exigirá significativamente uma maior análise, desenvolvimento e testes antes que uma solução satisfatória possa ser implementada."
+
+#: src/components/Documentation/index.tsx
+msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
+msgstr "Consequentemente, a Fundação Nouns antecipa ser a administradora do poder de veto até que a Nouns DAO esteja pronta para implementar uma alternativa e, portanto, deseja esclarecer as condições sob as quais exerceria esse poder."
+
+#: src/components/Documentation/index.tsx
+msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
+msgstr "A Fundação Nouns e a Nouns DAO consideram o veto um poder emergencial que não deve ser exercido no curso normal dos negócios. A Nouns DAO vetará propostas que apresentem riscos jurídicos ou existenciais não triviais a Nouns DAO, incluindo (mas não necessariamente limitado a) propostas que:"
+
+#: src/components/Documentation/index.tsx
+msgid "unequally withdraw the treasury for personal gain"
+msgstr "busquem sacar de forma desigual o tesouro para ganho pessoal"
+
+#: src/components/NavBar/index.tsx
+msgid "bribe voters to facilitate withdraws of the treasury for personal gain"
+msgstr "subornem membros com direito à voto para facilitar saques do tesouro para ganho pessoal"
+
+#: src/components/NavBar/index.tsx
+msgid "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
+msgstr "tentar alterar a cadência do leilão Noun com o objetivo de manter ou adquirir a maioria dos votos"
+
+#: src/components/NavBar/index.tsx
+msgid "make upgrades to critical smart contracts without undergoing an audit"
+msgstr "fazer atualizações para contratos inteligentes críticos sem passar por uma auditoria"
+
+#: src/components/Documentation/index.tsx
+msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
+msgstr "Infelizmente, não existem soluções algorítmicas para fazer essas determinações antecipadamente (se houvesse, o veto não seria necessário), e as propostas devem ser consideradas caso a caso."
 
 #: src/components/Documentation/index.tsx
 msgid "The treasury is controlled exclusively by NounsBR via governance."
 msgstr "O tesouro é controlado exclusivamente pelos NounsBR via governança."
-
-#: src/components/Documentation/index.tsx
-msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
-msgstr "Infelizmente, não há soluções algorítmicas para fazer essas determinações antecipadamente (se houvesse, o veto não seria necessário), e as propostas devem ser consideradas caso a caso."
 
 #: src/components/VoteModal/index.tsx
 msgid "There was an error voting for your account."
@@ -1163,8 +1185,8 @@ msgid "Your <0>{availableVotes}</0> votes have been delegated to a new account."
 msgstr "Seus <0>{availableVotes}</0> votos foram delegados para uma nova conta."
 
 #: src/components/Documentation/index.tsx
-msgid "accessories (140)"
-msgstr "accessories (140)"
+msgid "accessories (24)"
+msgstr "accessories (24)"
 
 #: src/components/AuctionTimer/index.tsx
 msgid "at"
@@ -1179,20 +1201,20 @@ msgid "backgrounds (2)"
 msgstr "backgrounds (2)"
 
 #: src/components/Documentation/index.tsx
-msgid "bodies (30)"
-msgstr "bodies (30)"
+msgid "bodies (16)"
+msgstr "bodies (16)"
 
 #: src/components/Documentation/index.tsx
-msgid "glasses (23)"
-msgstr "glasses (23)"
+msgid "glasses (13)"
+msgstr "glasses (13)"
 
 #: src/components/AuctionTimer/index.tsx
 msgid "h"
 msgstr "h"
 
 #: src/components/Documentation/index.tsx
-msgid "heads (242)"
-msgstr "heads (242)"
+msgid "heads (40)"
+msgstr "heads (40)"
 
 #: src/components/AuctionTimer/index.tsx
 msgid "m"
@@ -1333,20 +1355,4 @@ msgstr "Quando um projeto passa por uma votação on-chain, o criador dessa prop
 #: src/components/NavBar/index.tsx
 msgid "About"
 msgstr "Sobre"
-
-#: src/components/Documentation/index.tsx
-msgid "unequally withdraw the treasury for personal gain"
-msgstr "retirar desigualmente o tesouro para ganho pessoal"
-
-#: src/components/NavBar/index.tsx
-msgid "bribe voters to facilitate withdraws of the treasury for personal gain"
-msgstr "subornar eleitores para facilitar saques do tesouro para ganho pessoal"
-
-#: src/components/NavBar/index.tsx
-msgid "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
-msgstr "tentar alterar a cadência do leilão NounBR com o objetivo de manter ou adquirir a maioria dos votos"
-
-#: src/components/NavBar/index.tsx
-msgid "make upgrades to critical smart contracts without undergoing an audit"
-msgstr "fazer atualizações para contratos inteligentes críticos sem passar por uma auditoria"
 

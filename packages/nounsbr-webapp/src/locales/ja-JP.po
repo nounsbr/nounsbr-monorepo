@@ -276,10 +276,6 @@ msgstr "提案するためにはウォレットに接続してください。"
 msgid "Connect your wallet"
 msgstr "ウォレットに接続してください"
 
-#: src/components/Documentation/index.tsx
-msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
-msgstr ""
-
 #: src/components/CreateProposalButton/index.tsx
 #: src/pages/CreateProposal/index.tsx
 msgid "Create Proposal"
@@ -899,11 +895,31 @@ msgid "The NounsBR Auction Contract will act as a self-sufficient NounBR generat
 msgstr "The NounsBR Auction Contract will act as a self-sufficient NounBR generation and distribution mechanism, auctioning one NounBR every 15 minutes, forever. 100% of auction proceeds (ETH) are automatically deposited in the NounsBR DAO treasury, where they are governed by NounBR owners."
 
 #: src/components/Documentation/index.tsx
-msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
+msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:) "
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "(Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:) "
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
 msgstr ""
 
 #: src/components/Documentation/index.tsx
 msgid "The NounsBR community has undertaken a preliminary exploration of proposal veto alternatives (‘rage quit’ etc.), but it is now clear that this is a difficult problem that will require significantly more research, development and testing before a satisfactory solution can be implemented."
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
+msgstr ""
+
+#: src/components/Documentation/index.tsx
+msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
 msgstr ""
 
 #: src/components/DynamicQuorumInfoModal/index.tsx
@@ -923,16 +939,8 @@ msgid "The playground was built using the {nounsbrProtocolLink}. NounBR's traits
 msgstr "遊び場は{nounsbrProtocolLink} を使用して作られており、NounBRの特徴は、NounBRシードによって決まります。{nounsbrAssetsLink} でシードを生成し、{nounsbrSDKLink} でレンダリングされています。"
 
 #: src/components/Documentation/index.tsx
-msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
-msgstr ""
-
-#: src/components/Documentation/index.tsx
 msgid "The treasury is controlled exclusively by NounsBR via governance."
 msgstr "トレジャリーは、ガバナンスを通じてNounsBRが独占的に管理しています。"
-
-#: src/components/Documentation/index.tsx
-msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
-msgstr ""
 
 #: src/components/VoteModal/index.tsx
 msgid "There was an error voting for your account."
@@ -1170,8 +1178,8 @@ msgid "Your <0>{availableVotes}</0> votes have been delegated to a new account."
 msgstr "あなたの<0>{availableVotes}</0>票が新しいアカウントに委任されました"
 
 #: src/components/Documentation/index.tsx
-msgid "accessories (140)"
-msgstr "付属品(140)"
+msgid "accessories (24)"
+msgstr "付属品(24)"
 
 #: src/components/AuctionTimer/index.tsx
 msgid "at"
@@ -1186,20 +1194,20 @@ msgid "backgrounds (2)"
 msgstr "背景 (2)"
 
 #: src/components/Documentation/index.tsx
-msgid "bodies (30)"
-msgstr "体 (30)"
+msgid "bodies (16)"
+msgstr "体 (16)"
 
 #: src/components/Documentation/index.tsx
-msgid "glasses (23)"
-msgstr "メガネ (23)"
+msgid "glasses (13)"
+msgstr "メガネ (13)"
 
 #: src/components/AuctionTimer/index.tsx
 msgid "h"
 msgstr "時間"
 
 #: src/components/Documentation/index.tsx
-msgid "heads (242)"
-msgstr "頭 (242)"
+msgid "heads (40)"
+msgstr "頭 (40)"
 
 #: src/components/AuctionTimer/index.tsx
 msgid "m"

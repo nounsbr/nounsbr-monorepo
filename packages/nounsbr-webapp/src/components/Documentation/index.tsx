@@ -153,6 +153,11 @@ const Documentation = () => {
             <Accordion.Body>
               <p>
                 <Trans>
+                (Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:)
+                </Trans>
+              </p>
+              <p>
+                <Trans>
                   The proposal veto right was initially envisioned as a temporary solution to the
                   problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially
                   believed that a healthy distribution of NounsBR would be sufficient protection for
@@ -232,16 +237,16 @@ const Documentation = () => {
                   <Trans>backgrounds (2) </Trans>
                 </li>
                 <li>
-                  <Trans>bodies (30)</Trans>
+                  <Trans>bodies (16)</Trans>
                 </li>
                 <li>
-                  <Trans>accessories (140) </Trans>
+                  <Trans>accessories (24) </Trans>
                 </li>
                 <li>
-                  <Trans>heads (242) </Trans>
+                  <Trans>heads (40) </Trans>
                 </li>
                 <li>
-                  <Trans>glasses (23)</Trans>
+                  <Trans>glasses (13)</Trans>
                 </li>
               </ul>
               <Trans>

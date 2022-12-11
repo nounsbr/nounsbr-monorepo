@@ -39,7 +39,7 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
   .addOptionalParam(
     'auctionTimeBuffer',
     'The auction time buffer (seconds)',
-    1.5 * 60 /* 5 minutes */,
+    1.5 * 60 /* 1.5 minutes */,
     types.int,
   )
   .addOptionalParam(
