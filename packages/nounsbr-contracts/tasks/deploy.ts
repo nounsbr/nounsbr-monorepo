@@ -28,7 +28,7 @@ const GOVERNOR_N_DELEGATOR_NONCE_OFFSET = 12;
 task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and NounsBRToken')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
   .addOptionalParam('weth', 'The WETH contract address', undefined, types.string)
-  .addOptionalParam('noundersbrdao', 'The noundersbr DAO contract address', '0x3c68309658218f9eE50E659390b3C23A4F5c1400', types.string)
+  .addOptionalParam('noundersbrdao', 'The noundersbr DAO contract address', '0x5eE4d81fEA7164D9ff0A29B2C1A002756c1Aa3f9', types.string)
   .addOptionalParam(
     'auctionTimeBuffer',
     'The auction time buffer (seconds)',
