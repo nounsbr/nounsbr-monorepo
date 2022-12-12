@@ -1,13 +1,6 @@
 import { default as NounsBRAuctionHouseABI } from '../abi/contracts/NounsBRAuctionHouse.sol/NounsBRAuctionHouse.json';
-import {
-  ChainId,
-  ContractDeployment,
-  ContractName,
-  ContractNameDescriptorV1,
-  ContractNamesDAOV2,
-  DeployedContract,
-} from './types';
-import { Interface, parseUnits } from 'ethers/lib/utils';
+import { ChainId, ContractDeployment, ContractName, DeployedContract } from './types';
+import { Interface } from 'ethers/lib/utils';
 import { task, types } from 'hardhat/config';
 import promptjs from 'prompt';
 
@@ -57,7 +50,7 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
   .addOptionalParam(
     'auctionDuration',
     'The auction duration (seconds)',
-    60 * 60 * 0.25 /* 15 min */,
+    15 * 60 /* 15 min */,
     types.int,
   )
   .addOptionalParam(
@@ -90,19 +83,6 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
     1_000 /* 10% */,
     types.int,
   )
-  .addOptionalParam(
-    'minQuorumVotesBPS',
-    'Min basis points input for dynamic quorum',
-    1_000,
-    types.int,
-  ) // Default: 10%
-  .addOptionalParam(
-    'maxQuorumVotesBPS',
-    'Max basis points input for dynamic quorum',
-    4_000,
-    types.int,
-  ) // Default: 40%
-  .addOptionalParam('quorumCoefficient', 'Dynamic quorum coefficient (float)', 1, types.float)
   .setAction(async (args, { ethers }) => {
     const network = await ethers.provider.getNetwork();
     const [deployer] = await ethers.getSigners();
@@ -139,11 +119,11 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
       from: deployer.address,
       nonce: nonce + GOVERNOR_N_DELEGATOR_NONCE_OFFSET,
     });
-    const deployment: Record<ContractNamesDAOV2, DeployedContract> = {} as Record<
-      ContractNamesDAOV2,
+    const deployment: Record<ContractName, DeployedContract> = {} as Record<
+      ContractName,
       DeployedContract
     >;
-    const contracts: Record<ContractNamesDAOV2, ContractDeployment> = {
+    const contracts: Record<ContractName, ContractDeployment> = {
       NFTDescriptorV2: {},
       SVGRenderer: {},
       NounsBRDescriptorV2: {
@@ -198,29 +178,25 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
       NounsBRDAOExecutor: {
         args: [expectedNounsBRDAOProxyAddress, args.timelockDelay],
       },
-      NounsBRDAOLogicV2: {
+      NounsBRDAOLogicV1: {
         waitForConfirmation: true,
       },
-      NounsBRDAOProxyV2: {
+      NounsBRDAOProxy: {
         args: [
           () => deployment.NounsBRDAOExecutor.address,
           () => deployment.NounsBRToken.address,
           args.noundersbrdao,
           () => deployment.NounsBRDAOExecutor.address,
-          () => deployment.NounsBRDAOLogicV2.address,
+          () => deployment.NounsBRDAOLogicV1.address,
           args.votingPeriod,
           args.votingDelay,
           args.proposalThresholdBps,
-          {
-            minQuorumVotesBPS: args.minQuorumVotesBPS,
-            maxQuorumVotesBPS: args.maxQuorumVotesBPS,
-            quorumCoefficient: parseUnits(args.quorumCoefficient.toString(), 6),
-          },
+          args.quorumVotesBps,
         ],
         waitForConfirmation: true,
         validateDeployment: () => {
           const expected = expectedNounsBRDAOProxyAddress.toLowerCase();
-          const actual = deployment.NounsBRDAOProxyV2.address.toLowerCase();
+          const actual = deployment.NounsBRDAOProxy.address.toLowerCase();
           if (expected !== actual) {
             throw new Error(
               `Unexpected NounsBR DAO proxy address. Expected: ${expected}. Actual: ${actual}.`,
@@ -251,21 +227,6 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
         ]);
         gasPrice = ethers.utils.parseUnits(result.gasPrice.toString(), 'gwei');
       }
-
-      /*
-      let nameForFactory: string;
-      switch (name) {
-        case 'NounsBRDAOExecutor':
-          nameForFactory = 'NounsBRDAOExecutorTest';
-          break;
-        case 'NounsBRDAOLogicV2':
-          nameForFactory = 'NounsBRDAOLogicV2Harness';
-          break;
-        default:
-          nameForFactory = name;
-          break;
-      }
-      */
 
       const factory = await ethers.getContractFactory(name, {
         libraries: contract?.libraries?.(),
@@ -322,7 +283,7 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
         await deployedContract.deployed();
       }
 
-      deployment[name as ContractNamesDAOV2] = {
+      deployment[name as ContractName] = {
         name,
         instance: deployedContract,
         address: deployedContract.address,

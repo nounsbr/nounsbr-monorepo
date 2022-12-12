@@ -24,7 +24,7 @@ task('deploy-and-configure', 'Deploy and configure all contracts')
     const contracts = await run('deploy', args);
 
     // Verify the contracts on Etherscan
-    await run('verify-etherscan-daov2', {
+    await run('verify-etherscan', {
       contracts,
     });
 
@@ -61,7 +61,7 @@ task('deploy-and-configure', 'Deploy and configure all contracts')
 
     // Optionally write the deployed addresses to the SDK and subgraph configs.
     if (args.updateConfigs) {
-      await run('update-configs-daov2', {
+      await run('update-configs', {
         contracts,
       });
     }
