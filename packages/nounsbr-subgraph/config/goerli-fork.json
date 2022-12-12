@@ -1,15 +1,15 @@
 {
   "network": "goerli",
   "nounsbrToken": {
-    "address": "0xC7E6a1716870ea9c04D7129A2e68Ad375058d9B9",
-    "startBlock": 8099577
+    "address": "0xD7242CE08E8da10d0c4D326ec1b12d98055fc89d",
+    "startBlock": 8118919
   },
   "nounsbrAuctionHouse": {
-    "address": "0x065312994b13c11cF4c8e1AE6116bbB89C49DF3e",
-    "startBlock": 8099577
+    "address": "0xb25c10C8F6Ef6B03A7344c9EC687F2C8CaAF521a",
+    "startBlock": 8118919
   },
   "nounsbrDAO": {
-    "address": "0x20457b61F8597ba7e0e2F9186C11482450fb2B77",
-    "startBlock": 8099577
+    "address": "0x29d2dd0f3c01fb982d34E545660F4F8e33ED3Bc6",
+    "startBlock": 8118919
   }
 }

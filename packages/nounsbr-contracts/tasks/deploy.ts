@@ -35,7 +35,7 @@ const GOVERNOR_N_DELEGATOR_NONCE_OFFSET = 12;
 task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and NounsBRToken')
   .addFlag('autoDeploy', 'Deploy all contracts without user interaction')
   .addOptionalParam('weth', 'The WETH contract address', undefined, types.string)
-  .addOptionalParam('noundersbrdao', 'The noundersbr DAO contract address', undefined, types.string)
+  .addOptionalParam('noundersbrdao', 'The noundersbr DAO contract address', '0x3c68309658218f9eE50E659390b3C23A4F5c1400', types.string)
   .addOptionalParam(
     'auctionTimeBuffer',
     'The auction time buffer (seconds)',
@@ -90,6 +90,19 @@ task('deploy', 'Deploys NFTDescriptor, NounsBRDescriptor, NounsBRSeeder, and Nou
     1_000 /* 10% */,
     types.int,
   )
+  .addOptionalParam(
+    'minQuorumVotesBPS',
+    'Min basis points input for dynamic quorum',
+    1_000,
+    types.int,
+  ) // Default: 10%
+  .addOptionalParam(
+    'maxQuorumVotesBPS',
+    'Max basis points input for dynamic quorum',
+    4_000,
+    types.int,
+  ) // Default: 40%
+  .addOptionalParam('quorumCoefficient', 'Dynamic quorum coefficient (float)', 1, types.float)
   .setAction(async (args, { ethers }) => {
     const network = await ethers.provider.getNetwork();
     const [deployer] = await ethers.getSigners();
