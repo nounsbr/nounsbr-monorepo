@@ -2,6 +2,8 @@ import classes from './NounBRTraitsOverlay.module.css';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
+console.info('NounBRTraitsOverlay');
+
 const NounBRTraitsOverlay: React.FC<{
   parts: { filename: string }[];
 }> = props => {

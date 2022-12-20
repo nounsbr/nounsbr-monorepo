@@ -34,6 +34,7 @@ export const getNounBR = (nounbrId: string | EthersBN, seed: INounBRSeed) => {
     name,
     description,
     image,
+    parts,
   };
 };
 
@@ -133,9 +134,9 @@ export const StandaloneNounBRWithSeed: React.FC<StandaloneNounBRWithSeedProps> =
     dispatch(setOnDisplayAuctionNounBRId(nounbrId.toNumber()));
   };
 
-  const { image, description } = getNounBR(nounbrId, seed);
+  const { image, description, parts } = getNounBR(nounbrId, seed);
 
-  const nounbr = <NounBR imgPath={image} alt={description} />;
+  const nounbr = <NounBR imgPath={image} alt={description} parts={parts} />;
   const nounbrWithLink = (
     <Link
       to={'/nounbr/' + nounbrId.toString()}
