@@ -920,7 +920,7 @@ msgid "Consequently, the Nouns Foundation (and in NounsBR case, its founders) an
 msgstr "Consequentemente, a Fundação Nouns (e no caso da NounsBR, seus fundadores) antecipa ser a administradora do poder de veto até que a Nouns DAO esteja pronta para implementar uma alternativa e, portanto, deseja esclarecer as condições sob as quais exerceria esse poder."
 
 #: src/components/Documentation/index.tsx
-msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
+msgid "The Nouns Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
 msgstr "A Fundação Nouns e a Nouns DAO consideram o veto um poder emergencial que não deve ser exercido no curso normal dos negócios. A Nouns DAO vetará propostas que apresentem riscos jurídicos ou existenciais não triviais à Nouns DAO, incluindo (mas não necessariamente limitado a) propostas que:"
 
 #: src/components/Documentation/index.tsx

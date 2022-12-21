@@ -183,7 +183,7 @@ const Documentation = () => {
               </p>
               <p>
                 <Trans>
-                  The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that
+                  The Nouns Foundation and NounsBR DAO considers the veto an emergency power that
                   should not be exercised in the normal course of business. The NounsBR DAO will
                   veto proposals that introduce non-trivial legal or existential risks to the
                   NounsBR DAO , including (but not necessarily limited to) proposals that:
