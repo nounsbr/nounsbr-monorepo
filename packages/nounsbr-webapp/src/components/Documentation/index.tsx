@@ -177,9 +177,8 @@ const Documentation = () => {
               </p>
               <p>
                 <Trans>
-                  Consequently, the NounsBR Foundation anticipates being the steward of the veto
-                  power until NounsBR DAO is ready to implement an alternative, and therefore wishes
-                  to clarify the conditions under which it would exercise this power.
+                  Consequently, the Nouns Foundation (and in NounsBR case, its founders) anticipates being the steward of the veto
+                  power until Nouns DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power.
                 </Trans>
               </p>
               <p>

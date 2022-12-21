@@ -901,7 +901,7 @@ msgid "The NounsBR community has undertaken a preliminary exploration of proposa
 msgstr ""
 
 #: src/components/Documentation/index.tsx
-msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
+msgid "Consequently, the Nouns Foundation (and in NounsBR case, its founders) anticipates being the steward of the veto power until Nouns DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
 msgstr ""
 
 #: src/components/Documentation/index.tsx

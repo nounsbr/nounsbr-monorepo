@@ -905,7 +905,7 @@ msgstr "O playground foi construído usando o {nounsbrProtocolLink}. Os Traits d
 
 #: src/components/Documentation/index.tsx
 msgid "Regarding the NoundersBR veto right, the NounsBR DAO will follow the exact terms applied by Nouns DAO, as follows:"
-msgstr "No que se relaciona ao direito à veto dos fundadores, a NounsBR DAO seguirá os exatos termos aplicados pela Nouns DAO em relação ao tema, conforme o texto abaixo:"
+msgstr "No que se relaciona ao direito à veto dos fundadores, a NounsBR DAO seguirá os termos aplicados pela Nouns DAO em relação ao tema, conforme o texto desta reproduzido abaixo:"
 
 #: src/components/Documentation/index.tsx
 msgid "The proposal veto right was initially envisioned as a temporary solution to the problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially believed that a healthy distribution of NounsBR would be sufficient protection for the DAO, a more complete understanding of the incentives and risks has led to general consensus within the NoundersBR, the NounsBR Foundation, and the wider community that a more robust game-theoretic solution should be implemented before the right is removed."
@@ -916,12 +916,12 @@ msgid "The NounsBR community has undertaken a preliminary exploration of proposa
 msgstr "A comunidade Nouns empreendeu uma exploração preliminar das alternativas de veto da proposta (‘rage quit’ etc.), mas agora está claro que este é um problema difícil que exigirá significativamente uma maior análise, desenvolvimento e testes antes que uma solução satisfatória possa ser implementada."
 
 #: src/components/Documentation/index.tsx
-msgid "Consequently, the NounsBR Foundation anticipates being the steward of the veto power until NounsBR DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
-msgstr "Consequentemente, a Fundação Nouns antecipa ser a administradora do poder de veto até que a Nouns DAO esteja pronta para implementar uma alternativa e, portanto, deseja esclarecer as condições sob as quais exerceria esse poder."
+msgid "Consequently, the Nouns Foundation (and in NounsBR case, its founders) anticipates being the steward of the veto power until Nouns DAO is ready to implement an alternative, and therefore wishes to clarify the conditions under which it would exercise this power."
+msgstr "Consequentemente, a Fundação Nouns (e no caso da NounsBR, seus fundadores) antecipa ser a administradora do poder de veto até que a Nouns DAO esteja pronta para implementar uma alternativa e, portanto, deseja esclarecer as condições sob as quais exerceria esse poder."
 
 #: src/components/Documentation/index.tsx
 msgid "The NounsBR Foundation and NounsBR DAO considers the veto an emergency power that should not be exercised in the normal course of business. The NounsBR DAO will veto proposals that introduce non-trivial legal or existential risks to the NounsBR DAO , including (but not necessarily limited to) proposals that:"
-msgstr "A Fundação Nouns e a Nouns DAO consideram o veto um poder emergencial que não deve ser exercido no curso normal dos negócios. A Nouns DAO vetará propostas que apresentem riscos jurídicos ou existenciais não triviais a Nouns DAO, incluindo (mas não necessariamente limitado a) propostas que:"
+msgstr "A Fundação Nouns e a Nouns DAO consideram o veto um poder emergencial que não deve ser exercido no curso normal dos negócios. A Nouns DAO vetará propostas que apresentem riscos jurídicos ou existenciais não triviais à Nouns DAO, incluindo (mas não necessariamente limitado a) propostas que:"
 
 #: src/components/Documentation/index.tsx
 msgid "unequally withdraw the treasury for personal gain"
@@ -933,11 +933,11 @@ msgstr "subornem membros com direito à voto para facilitar saques do tesouro pa
 
 #: src/components/NavBar/index.tsx
 msgid "attempt to alter NounBR auction cadence for the purpose of maintaining or acquiring a voting majority"
-msgstr "tentar alterar a cadência do leilão Noun com o objetivo de manter ou adquirir a maioria dos votos"
+msgstr "tentem alterar a cadência do leilão Noun com o objetivo de manter ou adquirir a maioria dos votos"
 
 #: src/components/NavBar/index.tsx
 msgid "make upgrades to critical smart contracts without undergoing an audit"
-msgstr "fazer atualizações para contratos inteligentes críticos sem passar por uma auditoria"
+msgstr "façam atualizações para contratos inteligentes críticos sem passar por uma auditoria"
 
 #: src/components/Documentation/index.tsx
 msgid "There are unfortunately no algorithmic solutions for making these determinations in advance (if there were, the veto would not be required), and proposals must be considered on a case by case basis."
