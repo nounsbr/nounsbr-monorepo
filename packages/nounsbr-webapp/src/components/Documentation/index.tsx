@@ -159,17 +159,17 @@ const Documentation = () => {
               <p>
                 <Trans>
                   The proposal veto right was initially envisioned as a temporary solution to the
-                  problem of ‘51% attacks’ on the NounsBR DAO treasury. While NoundersBR initially
-                  believed that a healthy distribution of NounsBR would be sufficient protection for
+                  problem of ‘51% attacks’ on the Nouns DAO treasury. While Nounders initially
+                  believed that a healthy distribution of Nouns would be sufficient protection for
                   the DAO, a more complete understanding of the incentives and risks has led to
-                  general consensus within the NoundersBR, the NounsBR Foundation, and the wider
+                  general consensus within the Nounders, the Nouns Foundation, and the wider
                   community that a more robust game-theoretic solution should be implemented before
                   the right is removed.
                 </Trans>
               </p>
               <p>
                 <Trans>
-                  The NounsBR community has undertaken a preliminary exploration of proposal veto
+                  The Nouns community has undertaken a preliminary exploration of proposal veto
                   alternatives (‘rage quit’ etc.), but it is now clear that this is a difficult
                   problem that will require significantly more research, development and testing
                   before a satisfactory solution can be implemented.
