@@ -5,7 +5,7 @@ import Proposals from '../../components/Proposals';
 import classes from './Governance.module.css';
 import { utils } from 'ethers/lib/ethers';
 import clsx from 'clsx';
-import { useTreasuryBalance, useTreasuryUSDValue } from '../../hooks/useTreasuryBalance';
+import { useTreasuryBalance, useTreasuryUSDValue, useTreasuryBRLValue } from '../../hooks/useTreasuryBalance';
 import { Trans } from '@lingui/macro';
 import { i18n } from '@lingui/core';
 
@@ -16,6 +16,7 @@ const GovernancePage = () => {
 
   const treasuryBalance = useTreasuryBalance();
   const treasuryBalanceUSD = useTreasuryUSDValue();
+  const treasuryBalanceBRL = useTreasuryBRLValue();
 
   // Note: We have to extract this copy out of the <span> otherwise the Lingui macro gets confused
   const nounbrSingular = <Trans>NounBR</Trans>;
@@ -66,6 +67,13 @@ const GovernancePage = () => {
                       currency: 'USD',
                     })}
                 </h1>
+                <h1 className={classes.usdBalance}>
+                  {treasuryBalanceBRL &&
+                    i18n.number(Number(treasuryBalanceBRL.toFixed(0)), {
+                      style: 'currency',
+                      currency: 'BRL',
+                    })}
+                  </h1>
               </Col>
             </Row>
           </Col>

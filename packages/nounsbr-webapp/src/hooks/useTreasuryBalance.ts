@@ -27,3 +27,21 @@ export const useTreasuryUSDValue = () => {
   );
   return etherPrice * treasuryBalanceETH;
 };
+
+/**
+ * Computes treasury usd value of treasury assets (ETH + Lido) at current ETH-BRL exchange rate
+ *
+ * @returns BRL value of treasury assets (ETH + Lido) at current exchange rate
+ */
+export const useTreasuryBRLValue = () => {
+  const etherPrice = Number(useCoingeckoPrice('ethereum', 'brl'));
+  const treasuryBalanceETH = Number(
+    ethers.utils.formatEther(useTreasuryBalance()?.toString() || '0'),
+  );
+  return etherPrice * treasuryBalanceETH;
+};
+
+//debug
+//const etherPriceBRL = Number(useCoingeckoPrice('ethereum', 'brl'));
+//console.log(`ETH em reais: `, etherPriceBRL);
+//
