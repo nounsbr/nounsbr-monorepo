@@ -16,6 +16,9 @@ import WalletConnectModal from '../WalletConnectModal';
 import { Trans } from '@lingui/macro';
 import { useActiveLocale } from '../../hooks/useActivateLocale';
 import responsiveUiUtilsClasses from '../../utils/ResponsiveUIUtils.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import InfoModal from '../InfoModal';
 
 const computeMinimumNextBid = (
   currentBid: BigNumber,
@@ -74,6 +77,7 @@ const Bid: React.FC<{
     setShowConnectModal(false);
   };
 
+  
   const dispatch = useAppDispatch();
   const setModal = useCallback((modal: AlertModal) => dispatch(setAlertModal(modal)), [dispatch]);
 
@@ -195,6 +199,15 @@ const Bid: React.FC<{
     }
   }, [placeBidState, auctionEnded, setModal]);
 
+      //TODO: Refactor Modal to utilitse new modal design
+    const [showBidHistoryModal, setShowBidHistoryModal] = useState(false);
+    const showBidModalHandler = () => {
+      setShowBidHistoryModal(true);
+    };
+    const dismissBidModalHanlder = () => {
+      setShowBidHistoryModal(false);
+    };
+
   // settle auction transaction state hook
   useEffect(() => {
     switch (auctionEnded && settleAuctionState.status) {
@@ -243,6 +256,7 @@ const Bid: React.FC<{
 
   return (
     <>
+    {showBidHistoryModal && <InfoModal onDismiss={dismissBidModalHanlder} />}
       {showConnectModal && activeAccount === undefined && (
         <WalletConnectModal onDismiss={hideModalHandler} />
       )}
@@ -286,6 +300,14 @@ const Bid: React.FC<{
         ) : (
           <>
             {/* Only show force settle button if wallet connected */}
+              <>
+                <Col lg={12}>
+                <button onClick={showBidModalHandler} className={classes.infoButton}>
+                  <FontAwesomeIcon icon={faInfoCircle} />
+                  <Trans>bidding and settling</Trans>
+                </button>
+                </Col>
+              </>
             {isWalletConnected && (
               <Col lg={12} className={classes.voteForNextNounBRBtnWrapper}>
                 <Button className={classes.bidBtnAuctionEnded} onClick={settleAuctionHandler}>
@@ -296,6 +318,16 @@ const Bid: React.FC<{
           </>
         )}
       </InputGroup>
+      {!auctionEnded ? (
+        <Col lg={11} style={{ paddingTop: '0.5em' }}>
+          <button onClick={showBidModalHandler} className={classes.infoButton}>
+              <FontAwesomeIcon icon={faInfoCircle} />
+              <Trans>bidding and settling</Trans>
+          </button>
+        </Col>
+      ) : (
+        <></>
+      )}
     </>
   );
 };

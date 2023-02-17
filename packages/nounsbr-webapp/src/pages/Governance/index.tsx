@@ -8,11 +8,15 @@ import clsx from 'clsx';
 import { useTreasuryBalance, useTreasuryUSDValue, useTreasuryBRLValue } from '../../hooks/useTreasuryBalance';
 import { Trans } from '@lingui/macro';
 import { i18n } from '@lingui/core';
+import { useActiveLocale } from '../../hooks/useActivateLocale';
+import { Locales } from '../../i18n/locales';
 
 const GovernancePage = () => {
   const { data: proposals } = useAllProposals();
   const threshold = useProposalThreshold();
   const nounsbrRequired = threshold !== undefined ? threshold + 1 : '...';
+
+  const activeLocale = useActiveLocale();
 
   const treasuryBalance = useTreasuryBalance();
   const treasuryBalanceUSD = useTreasuryUSDValue();
@@ -60,6 +64,7 @@ const GovernancePage = () => {
                 </h1>
               </Col>
               <Col className={classes.usdTreasuryAmt}>
+                {activeLocale === Locales.en_US ? (
                 <h1 className={classes.usdBalance}>
                   {treasuryBalanceUSD &&
                     i18n.number(Number(treasuryBalanceUSD.toFixed(0)), {
@@ -67,6 +72,7 @@ const GovernancePage = () => {
                       currency: 'USD',
                     })}
                 </h1>
+                 ) : (
                 <h1 className={classes.usdBalance}>
                   {treasuryBalanceBRL &&
                     i18n.number(Number(treasuryBalanceBRL.toFixed(0)), {
@@ -74,6 +80,7 @@ const GovernancePage = () => {
                       currency: 'BRL',
                     })}
                   </h1>
+                 )}
               </Col>
             </Row>
           </Col>

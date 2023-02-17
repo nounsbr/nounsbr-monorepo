@@ -1354,3 +1354,62 @@ msgstr "Quando um projeto passa por uma votação on-chain, o criador dessa prop
 msgid "About"
 msgstr "Sobre"
 
+#: src/components/infoModal/index.tsx
+msgid "bidding and settling"
+msgstr "lances e liquidação"
+
+
+msgid "Bidding and Settling"
+msgstr "Lances e Liquidação"
+
+msgid "Settlement"
+msgstr "Liquidação"
+
+msgid "Anyone can settle an auction. When an auction ends, a gas-only transaction is required"
+msgstr "Qualquer pessoa pode liquidar um leilão. Quando um leilão termina, é necessária uma transação apenas de gás para "
+
+msgid "to send the current NounBR to the winners wallet and to mint a new NounBR for the next auction."
+msgstr "enviar o NounBR atual à carteira do vencedor e para mintar um novo NounBR para o próximo leilão."
+
+msgid "As gas price fluctuates, the cost of settlement also fluctuates."
+msgstr " À medida que o preço do gás flutua, o custo da liquidação também flutua."
+
+msgid "Settlement gas price of every 9th NounBR is higher. This is due to the transaction"
+msgstr "O preço do gás para a liquidação de cada 9º NounBR é mais elevado. Isto é devido à transação "
+
+msgid "also triggering 1 free NounBR mint: The NoundersBR mint."
+msgstr "desencadeada também de 1 mint NounBR gratuito: O NoundersBR mint."
+
+msgid "Bids"
+msgstr "Lances"
+
+msgid "Once an auction starts, everyone has 15 minutes to bid. Anyone can bid an amount"
+msgstr "Uma vez iniciado um leilão, todos têm 15 minutos para dar seus lances. Qualquer pessoa pode dar seu lance "
+
+msgid "at/above 0.01 eth. The Amount bid is returned to bidder if they lose the auction (minus"
+msgstr "em/mais de 0,01 eth. O montante do lance é devolvido ao licitante se este perder o leilão (menos "
+
+msgid "gas spent on bid transaction)."
+msgstr "o gás gasto nas transações dos lances)."
+
+msgid "Bids at the very last minute increase the auction time by 1:30 minutes."
+msgstr "Os lances feitos no último minuto aumentam o tempo de leilão em 1:30 minutos."
+
+msgid "Sometimes, multiple bids are sent at the same time. This may result in bids coming in"
+msgstr " Por vezes, vários lances são enviados ao mesmo tempo. Isto pode resultar em lances ainda a chegar "
+
+msgid "and winning an auction at the very last minute/seconds (irrespective of time increase)."
+msgstr "e ganhar um leilão no último minuto/segundos (independentemente do aumento do tempo)."
+
+msgid "Bid Refunds"
+msgstr "Reembolso de Lances"
+
+msgid "Unsuccessful bids are refunded in full. The timing of refunds may be offset by 1 bidder."
+msgstr "Lances mal sucedidos são reembolsados na totalidade. O prazo de reembolso pode ser compensado por 1 licitante."
+
+msgid "This means that a refund is processed for an unsuccessful bid, when a higher bid is"
+msgstr " Isto significa que um reembolso é processado para uma lance mal sucedido, quando um lance superior é "
+
+msgid "submitted."
+msgstr "submetido."
+

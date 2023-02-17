@@ -171,3 +171,26 @@
   margin: 0;
   padding: 0;
 }
+
+.infoButton{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: start;
+  width: 100%;
+  color: var(--brand-nu-blue);
+  border: transparent;
+  background-color: transparent;
+  font-weight: bold;
+  font-family: 'PT Root UI';
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.infoButton:hover,
+.infoButton:active,
+.infoButton:focus .infoButton:disabled {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent;
+  color: var(--brand-nu-red);
+}

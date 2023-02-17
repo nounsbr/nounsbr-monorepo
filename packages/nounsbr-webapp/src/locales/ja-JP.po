@@ -1357,4 +1357,61 @@ msgstr "attempt to alter NounBR auction cadence for the purpose of maintaining o
 msgid "make upgrades to critical smart contracts without undergoing an audit"
 msgstr "make upgrades to critical smart contracts without undergoing an audit"
 
+#: src/components/infoModal/index.tsx
+msgid "bidding and settling"
+msgstr "bidding and settling"
+
+msgid "Bidding and Settling"
+msgstr "Bidding and Settling"
+
+msgid "Settlement"
+msgstr "Settlement"
+
+msgid "Anyone can settle an auction. When an auction ends, a gas-only transaction is required"
+msgstr "Anyone can settle an auction. When an auction ends, a gas-only transaction is required "
+
+msgid "to send the current NounBR to the winners wallet and to mint a new NounBR for the next auction."
+msgstr "to send the current NounBR to the winners wallet and to mint a new NounBR for the next auction."
+
+msgid "As gas price fluctuates, the cost of settlement also fluctuates."
+msgstr " As gas price fluctuates, the cost of settlement also fluctuates."
+
+msgid "Settlement gas price of every 9th NounBR is higher. This is due to the transaction"
+msgstr "Settlement gas price of every 9th NounBR is higher. This is due to the transaction "
+
+msgid "also triggering 1 free NounBR mint: The NoundersBR mint."
+msgstr "also triggering 1 free NounBR mint: The NoundersBR mint."
+
+msgid "Bids"
+msgstr "Bids"
+
+msgid "Once an auction starts, everyone has 15 minutes to bid. Anyone can bid an amount"
+msgstr "Once an auction starts, everyone has 15 minutes to bid. Anyone can bid an amount "
+
+msgid "at/above 0.01 eth. The Amount bid is returned to bidder if they lose the auction (minus"
+msgstr "at/above 0.01 eth. The Amount bid is returned to bidder if they lose the auction (minus "
+
+msgid "gas spent on bid transaction)."
+msgstr "gas spent on bid transaction)."
+
+msgid "Bids at the very last minute increase the auction time by 1:30 minutes."
+msgstr "Bids at the very last minute increase the auction time by 1:30 minutes."
+
+msgid "Sometimes, multiple bids are sent at the same time. This may result in bids coming in"
+msgstr " Sometimes, multiple bids are sent at the same time. This may result in bids coming in "
+
+msgid "and winning an auction at the very last minute/seconds (irrespective of time increase)."
+msgstr "and winning an auction at the very last minute/seconds (irrespective of time increase)."
+
+msgid "Bid Refunds"
+msgstr "Bid Refunds"
+
+msgid "Unsuccessful bids are refunded in full. The timing of refunds may be offset by 1 bidder."
+msgstr "Unsuccessful bids are refunded in full. The timing of refunds may be offset by 1 bidder."
+
+msgid "This means that a refund is processed for an unsuccessful bid, when a higher bid is"
+msgstr " This means that a refund is processed for an unsuccessful bid, when a higher bid is "
+
+msgid "submitted."
+msgstr "submitted."
 
