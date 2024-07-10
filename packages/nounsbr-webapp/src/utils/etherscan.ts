@@ -1,12 +1,12 @@
 import { ChainId } from '@usedapp/core';
-import { CHAIN_ID, ETHERSCAN_API_KEY } from '../config';
+import { CHAIN_ID, ChainId_Sepolia, ETHERSCAN_API_KEY } from '../config';
 
 const getBaseURL = (network: ChainId) => {
   switch (network) {
-    case ChainId.Rinkeby:
-      return 'https://rinkeby.etherscan.io/';
     case ChainId.Goerli:
       return 'https://goerli.etherscan.io/';
+      case ChainId.Sepolia:
+      return 'https://sepolia.etherscan.io/';
     default:
       return 'https://etherscan.io/';
   }
