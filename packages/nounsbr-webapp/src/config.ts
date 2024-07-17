@@ -85,11 +85,11 @@ const app: Record<SupportedChains, AppConfig> = {
 };
 
 const externalAddresses: Record<SupportedChains, ExternalContractAddresses> = {
-  [ChainId_Sepolia]: {
-    lidoToken: undefined,
-  },
   [ChainId.Goerli]: {
     lidoToken: '0x2DD6530F136D2B56330792D46aF959D9EA62E276',
+  },
+  [ChainId_Sepolia]: {
+    lidoToken: undefined,
   },
   [ChainId.Mainnet]: {
     lidoToken: '0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84',
